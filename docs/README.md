@@ -1,12 +1,44 @@
 ---
+#博客首页设置：https://vuepress-theme-hope.github.io/v2/zh/guide/blog/home.html
 home: true
+layout: Blog
+icon: home
+bgImage: /images/banner.jpg
+title: 主页
 heroImage: /images/favicon.png
-heroText: 逐梦之旅
+heroText: Lu
+heroFullScreen: true
 tagline: 踏遍千山万水，不问前方路。
-actions:
-  - text: 开启征程 💡
-    link: /Vue2/
-    type: primary
-footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-present Mr.Hope
----
 
+# projects:
+#  - icon: project
+#    name: 项目名称
+#    desc: 项目详细描述
+#    link: https://你的项目链接
+
+#  - icon: link
+#    name: 链接名称
+#    desc: 链接详细描述
+#    link: https://链接地址
+
+#  - icon: book
+#    name: 书籍名称
+#    desc: 书籍详细描述
+#    link: https://你的书籍链接
+
+#  - icon: article
+#    name: 文章名称
+#    desc: 文章详细描述
+#    link: https://你的文章链接
+
+#  - icon: friend
+#    name: 伙伴名称
+#    desc: 伙伴详细介绍
+#    link: https://你的伙伴链接
+
+#  - icon: /logo.svg
+#    name: 自定义项目
+#    desc: 自定义详细介绍
+#    link: https://你的自定义链接
+
+---

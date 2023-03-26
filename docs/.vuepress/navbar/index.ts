@@ -1,7 +1,9 @@
 import { navbar } from "vuepress-theme-hope";
 
-export const zhNavbar = navbar([
-    { text: "前端框架", icon: "centos", link: "/Vue2/" },
+export const Navbar = navbar([
+    { text: "前端集合", icon: "centos", link: "/front-end/" },
+    { text: "后端集合", icon: "centos", link: "/back-end/" },
+    { text: "面试题汇总", icon: "read", link: "/topic/" },
     {
         text: "文档集合",
         icon: "note",
