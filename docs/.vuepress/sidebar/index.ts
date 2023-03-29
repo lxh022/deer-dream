@@ -9,6 +9,33 @@ export const Sidebar = sidebar([
         collapsible: true,
         children: [
             {
+                text: '前端三剑客',
+                icon: 'back-stage',
+                prefix: '',
+                collapsible: true,
+                children: [
+                    {
+                        text: 'HTML',
+                        icon: 'html',
+                        prefix: 'html/',
+                        collapsible: true,
+                        children: 'structure',
+                    }, {
+                        text: 'CSS',
+                        icon: 'css',
+                        prefix: 'css/',
+                        collapsible: true,
+                        children: 'structure',
+                    }, {
+                        text: 'Javascript',
+                        icon: 'javascript',
+                        prefix: 'javascript/',
+                        collapsible: true,
+                        children: 'structure',
+                    },
+                ]
+            },
+            {
                 text: '框架',
                 icon: 'tree',
                 prefix: '',
@@ -35,13 +62,20 @@ export const Sidebar = sidebar([
                         collapsible: true,
                         children: 'structure',
                     },
+                    {
+                        text: '微信小程序',
+                        icon: 'wechat',
+                        prefix: 'wechat/',
+                        collapsible: true,
+                        children: 'structure',
+                    },
                 ],
             },
         ],
     },
     {
         text: '服务端',
-        icon: 'page',
+        icon: 'network',
         prefix: '/back-end/',
         // link: '',
         collapsible: true,

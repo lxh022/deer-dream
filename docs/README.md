@@ -41,4 +41,8 @@ tagline: 踏遍千山万水，不问前方路。
 #    desc: 自定义详细介绍
 #    link: https://你的自定义链接
 
+
+# footer: "Copyright © 2023 Mr.Lu "
+# copyrightText:  <a href="https://beian.miit.gov.cn/#/Integrated/index">京ICP备2023006518号-1</a>
+
 ---

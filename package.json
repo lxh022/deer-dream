@@ -8,6 +8,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:clean-build": "vuepress build docs --clean-cache",
     "docs:update-package": "yarn dlx vp-update"
   },
   "devDependencies": {

@@ -1,4 +1,3 @@
-import { path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
@@ -76,7 +75,6 @@ export default hopeTheme({
       provider: "Waline",
     },
 
-    // all features are enabled for demo, only preserve features you need here
     // 禁用不需要的配置
     mdEnhance: {
       align: true,
