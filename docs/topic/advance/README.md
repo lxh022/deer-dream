@@ -1,8 +1,8 @@
-# [\#](#进阶篇){.header-anchor} 进阶篇
+# [\#](#进阶篇) 进阶篇
 
-## [\#](#一、js基础){.header-anchor} 一、JS基础 {#一、js基础}
+## [\#](#一、js基础) 一、JS基础 {#一、js基础}
 
-### [\#](#_1-类型及检测方式){.header-anchor} 1 类型及检测方式 {#_1-类型及检测方式}
+### [\#](#_1-类型及检测方式) 1 类型及检测方式 {#_1-类型及检测方式}
 
 **1. JS内置类型**
 
@@ -618,7 +618,7 @@ null == undefined       // true  规则2
     "object"，这是一个历史遗留的问题。当我们使用双等号对两种类型的值进行比较时会返回
     true，使用三个等号时会返回 false。
 
-### [\#](#_2-this){.header-anchor} 2 This {#_2-this}
+### [\#](#_2-this) 2 This {#_2-this}
 
 > 不同情况的调用，`this`指向分别如何。顺带可以提一下 `es6`
 > 中箭头函数没有 `this`, `arguments`, `super`
@@ -745,7 +745,7 @@ let a = { name: 'poetries' }
 -   `apply: fn.apply(target, [1, 2])`
 -   `bind: fn.bind(target)(1,2)`
 
-### [\#](#_3-apply-call-bind-原理){.header-anchor} 3 apply/call/bind 原理 {#_3-apply-call-bind-原理}
+### [\#](#_3-apply-call-bind-原理) 3 apply/call/bind 原理 {#_3-apply-call-bind-原理}
 
 > `call、apply` 和 `bind` 是挂在 `Function`
 > 对象上的三个方法，调用这三个方法的必须是一个函数。
@@ -934,7 +934,7 @@ Function.prototype.myApply = function(context = window, ...args) {
 ```
 
 
-### [\#](#_4-变量提升){.header-anchor} 4 变量提升 {#_4-变量提升}
+### [\#](#_4-变量提升) 4 变量提升 {#_4-变量提升}
 
 > 当执行 `JS`
 > 代码时，会生成执行环境，只要代码不是写在函数中的，就是在全局执行环境中，函数中的代码会产生函数执行环境，只此两种执行环境。
@@ -978,7 +978,7 @@ b() // call b second
 > `let`。`let`不能在声明前使用，但是这并不是常说的 `let`
 > 不会提升，`let`提升了，在第一阶段内存也已经为他开辟好了空间，但是因为这个声明的特性导致了并不能在声明前使用
 
-### [\#](#_5-执行上下文){.header-anchor} 5 执行上下文 {#_5-执行上下文}
+### [\#](#_5-执行上下文) 5 执行上下文 {#_5-执行上下文}
 
 > 当执行 JS 代码时，会产生三种执行上下文
 
@@ -1164,7 +1164,7 @@ specialObject = {};
 -   函数执行完后，`callee` 被`pop`移除出执行栈，控制权交还全局上下文
     (`caller`)，继续执行
 
-### [\#](#_6-作用域){.header-anchor} 6 作用域 {#_6-作用域}
+### [\#](#_6-作用域) 6 作用域 {#_6-作用域}
 
 -   作用域：
     作用域是定义变量的区域，它有一套访问变量的规则，这套规则来管理浏览器引擎如何在当前作用域以及嵌套的作用域中根据变量（标识符）进行变量查找
@@ -1272,7 +1272,7 @@ console.log(a) //a is not defined
 > 变量是会报错的，因为这里不是它的作用域。所以在 if 代码块的前后输出 a
 > 这个变量的结果，控制台会显示 a 并没有定义
 
-### [\#](#_7-闭包){.header-anchor} 7 闭包 {#_7-闭包}
+### [\#](#_7-闭包) 7 闭包 {#_7-闭包}
 
 > 闭包其实就是一个可以访问其他函数内部变量的函数。创建闭包的最常见的方式就是在一个函数内创建另一个函数，创建的函数可以
 > 访问到当前函数的局部变量。
@@ -1597,7 +1597,7 @@ for (var i = 0; i < 6; i++) {
 
 这道题会问输出什么，有哪几种方式可以得到想要的答案？
 
-### [\#](#_8-new的原理){.header-anchor} 8 New的原理 {#_8-new的原理}
+### [\#](#_8-new的原理) 8 New的原理 {#_8-new的原理}
 
 **常见考点**
 
@@ -1762,7 +1762,7 @@ function Person(name) {
 -   让实例可以访问构造函数原型（`constructor.prototype`）所在原型链上的属性；
 -   构造函数返回的最后结果是引用数据类型。
 
-### [\#](#_9-原型-原型链){.header-anchor} 9 原型/原型链 {#_9-原型-原型链}
+### [\#](#_9-原型-原型链) 9 原型/原型链 {#_9-原型-原型链}
 
 **`__proto__`和prototype关系**：`__proto__`和`constructor`是**对象**独有的。2️⃣`prototype`属性是**函数**独有的
 
@@ -1862,7 +1862,7 @@ function Person(name) {
 -   对象可以通过 `__proto__` 来寻找不属于该对象的属性，`__proto__`
     将对象连接起来组成了原型链。
 
-### [\#](#_10-继承){.header-anchor} 10 继承 {#_10-继承}
+### [\#](#_10-继承) 10 继承 {#_10-继承}
 
 > 涉及面试题：原型如何实现继承？`Class` 如何实现继承？`Class`
 > 本质是什么？
@@ -2190,7 +2190,7 @@ function _possibleConstructorReturn(self, call) {
 
 > 不一定。从继承的角度说，这一设计是存在巨大隐患的。
 
-### [\#](#_11-面向对象){.header-anchor} 11 面向对象 {#_11-面向对象}
+### [\#](#_11-面向对象) 11 面向对象 {#_11-面向对象}
 
 **编程思想**
 
@@ -2586,7 +2586,7 @@ function DetectorBase() {
 ```
 
 
-### [\#](#_12-事件机制){.header-anchor} 12 事件机制 {#_12-事件机制}
+### [\#](#_12-事件机制) 12 事件机制 {#_12-事件机制}
 
 > 涉及面试题：事件的触发过程是怎么样的？知道什么是事件代理嘛？
 
@@ -2729,7 +2729,7 @@ node.addEventListener('click',(event) =>{
 ```
 
 
-### [\#](#_13-模块化){.header-anchor} 13 模块化 {#_13-模块化}
+### [\#](#_13-模块化) 13 模块化 {#_13-模块化}
 
 > js 中现在比较成熟的有四种模块加载方案：
 
@@ -2879,7 +2879,7 @@ var module = require('./a.js')
 -   后面提出了对象写法，通过将函数作为一个对象的方法来实现，这样解决了直接使用函数作为模块的一些缺点，但是这种办法会暴露所有的所有的模块成员，外部代码可以修改内部属性的值。
 -   现在最常用的是立即执行函数的写法，通过利用闭包来实现模块私有作用域的建立，同时不会对全局作用域造成污染。
 
-### [\#](#_14-iterator迭代器){.header-anchor} 14 Iterator迭代器 {#_14-iterator迭代器}
+### [\#](#_14-iterator迭代器) 14 Iterator迭代器 {#_14-iterator迭代器}
 
 > `Iterator`（迭代器）是一种接口，也可以说是一种规范。为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署`Iterator`接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。
 
@@ -2970,7 +2970,7 @@ let obj = {
 ```
 
 
-### [\#](#_15-promise){.header-anchor} 15 Promise {#_15-promise}
+### [\#](#_15-promise) 15 Promise {#_15-promise}
 
 > 这里你谈 `promise`的时候，除了将他解决的痛点以及常用的 `API`
 > 之外，最好进行拓展把 `eventloop`
@@ -3216,7 +3216,7 @@ function myPromise(constructor){
 ```
 
 
-### [\#](#_16-generator){.header-anchor} 16 Generator {#_16-generator}
+### [\#](#_16-generator) 16 Generator {#_16-generator}
 
 > `Generator` 是 `ES6`中新增的语法，和 `Promise`
 > 一样，都可以用来异步编程。Generator函数可以说是Iterator接口的具体实现方式。Generator
@@ -3348,7 +3348,7 @@ function *foo(x) {
 ```
 
 
-### [\#](#_17-async-await){.header-anchor} 17 async/await {#_17-async-await}
+### [\#](#_17-async-await) 17 async/await {#_17-async-await}
 
 > `Generator` 函数的语法糖。有更好的语义、更好的适用性、返回值是
 > `Promise`。
@@ -3464,7 +3464,7 @@ var a = 0
     对象，所以我们为其添加 `then` 方法， 在 `then` 方法里面接着运行
     `next` 方法挪移遍历器指针，直到 `Generator`函数运行完成
 
-### [\#](#_18-事件循环){.header-anchor} 18 事件循环 {#_18-事件循环}
+### [\#](#_18-事件循环) 18 事件循环 {#_18-事件循环}
 
 -   默认代码从上到下执行，执行环境通过`script`来执行（宏任务）
 -   在代码执行过程中，调用定时器 `promise`
@@ -4031,7 +4031,7 @@ setTimeout(() => {
 `requestIdlecallback`
 利用起来执行一些优先级不高、不必立即执行的任务，如下图所示：
 
-### [\#](#_19-垃圾回收){.header-anchor} 19 垃圾回收 {#_19-垃圾回收}
+### [\#](#_19-垃圾回收) 19 垃圾回收 {#_19-垃圾回收}
 
 -   对于在JavaScript中的字符串，对象，数组是没有固定大小的，只有当对他们进行动态分配存储时，解释器就会分配内存来存储这些数据，当JavaScript的解释器消耗完系统中所有可用的内存时，就会造成系统崩溃。
 -   内存泄漏，在某些情况下，不再使用到的变量所占用内存没有及时释放，导致程序运行中，内存越占越大，极端情况下可以导致系统崩溃，服务器宕机。
@@ -4071,7 +4071,7 @@ setTimeout(() => {
 为了解决这个问题 V8
 引入了增量标记的方法，将一次停顿进行的过程分为了多步，每次执行完一小步就让运行逻辑执行一会，就这样交替运行
 
-### [\#](#_20-内存泄露){.header-anchor} 20 内存泄露 {#_20-内存泄露}
+### [\#](#_20-内存泄露) 20 内存泄露 {#_20-内存泄露}
 
 -   意外的全局变量: 无法被回收
 -   定时器: 未被正确关闭，导致所引用的外部变量无法被释放
@@ -4092,7 +4092,7 @@ setTimeout(() => {
 window)]{.sr-only}](https://juejin.cn/post/6947841638118998029?utm_source=gold_browser_extension){target="_blank"
 rel="noopener noreferrer"}
 
-### [\#](#_21-深浅拷贝){.header-anchor} 21 深浅拷贝 {#_21-深浅拷贝}
+### [\#](#_21-深浅拷贝) 21 深浅拷贝 {#_21-深浅拷贝}
 
 **1. 浅拷贝的原理和实现**
 
@@ -4450,7 +4450,7 @@ const isComplexDataType = obj => (typeof obj === 'object' || typeof obj === 'fun
 我们看一下结果，`cloneObj` 在 `obj` 的基础上进行了一次深拷贝，`cloneObj`
 里的 `arr` 数组进行了修改，并未影响到 `obj.arr` 的变化，如下图所示
 
-### [\#](#_22-节流与防抖){.header-anchor} 22 节流与防抖 {#_22-节流与防抖}
+### [\#](#_22-节流与防抖) 22 节流与防抖 {#_22-节流与防抖}
 
 -   函数防抖 是指在事件被触发 n 秒后再执行回调，如果在这 n
     秒内事件又被触发，则重新计时。这可以使用在一些点击请求的事件上，避免因为用户的多次点击向后端发送多次请求。
@@ -4501,7 +4501,7 @@ const isComplexDataType = obj => (typeof obj === 'object' || typeof obj === 'fun
 ```
 
 
-### [\#](#_23-proxy代理){.header-anchor} 23 Proxy代理 {#_23-proxy代理}
+### [\#](#_23-proxy代理) 23 Proxy代理 {#_23-proxy代理}
 
 > proxy在目标对象的外层搭建了一层拦截，外界对目标对象的某些操作，必须通过这层拦截
 
@@ -4665,7 +4665,7 @@ var proxy = new Proxy({}, {
 ```
 
 
-### [\#](#_24-ajax){.header-anchor} 24 Ajax {#_24-ajax}
+### [\#](#_24-ajax) 24 Ajax {#_24-ajax}
 
 > 它是一种异步通信的方法，通过直接由 js 脚本向服务器发起 http
 > 通信，然后根据服务器返回的数据，更新网页的相应部分，而不用刷新整个页面的一种方法。
@@ -4757,7 +4757,7 @@ $.ajax({
 ```
 
 
-### [\#](#_25-深入数组){.header-anchor} 25 深入数组 {#_25-深入数组}
+### [\#](#_25-深入数组) 25 深入数组 {#_25-深入数组}
 
 **一、梳理数组 API**
 
@@ -5728,9 +5728,9 @@ O(nlogn) 的时间复杂度。而代价是需要额外的内存空间。
 
 其中你可以看到排序相关的时间复杂度和空间复杂度以及稳定性的情况，如果遇到需要自己实现排序的时候，可以根据它们的空间和时间复杂度综合考量，选择最适合的排序方法
 
-## [\#](#二、html){.header-anchor} 二、HTML {#二、html}
+## [\#](#二、html) 二、HTML {#二、html}
 
-### [\#](#_1-meta-标签-自动刷新-跳转){.header-anchor} 1 meta 标签：自动刷新/跳转 {#_1-meta-标签-自动刷新-跳转}
+### [\#](#_1-meta-标签-自动刷新-跳转) 1 meta 标签：自动刷新/跳转 {#_1-meta-标签-自动刷新-跳转}
 
 假设要实现一个类似 PPT 自动播放的效果，你很可能会想到使用 JavaScript
 定时器控制页面跳转来实现。但其实有更加简洁的实现方法，比如通过 meta
@@ -5797,7 +5797,7 @@ O(nlogn) 的时间复杂度。而代价是需要额外的内存空间。
 ```
 
 
-### [\#](#_2-viewport){.header-anchor} 2 viewport {#_2-viewport}
+### [\#](#_2-viewport) 2 viewport {#_2-viewport}
 
 
 ```html
@@ -5827,7 +5827,7 @@ O(nlogn) 的时间复杂度。而代价是需要额外的内存空间。
 -   `mate`标签中的 `viewport`属性 ，`initial-scale` 设置为 `0.5`
 -   `rem` 按照设计稿标准走即可
 
-### [\#](#_3-性能优化){.header-anchor} 3 性能优化 {#_3-性能优化}
+### [\#](#_3-性能优化) 3 性能优化 {#_3-性能优化}
 
 > 性能优化是前端开发中避不开的问题，`性能问题无外乎两方面原因：渲染速度慢、请求时间长`。性能优化虽然涉及很多复杂的原因和解决方案，但其实只要通过合理地使用标签，就可以在一定程度上提升渲染速度以及减少请求时间
 
@@ -5875,7 +5875,7 @@ body 底部时会先将已解析的内容渲染出来，然后再去请求相应
     -   示例
         `<meta name="description" content="全球最大的中文搜索引擎、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。">`
 
-### [\#](#_4-如何高效操作dom){.header-anchor} 4 如何高效操作DOM {#_4-如何高效操作dom}
+### [\#](#_4-如何高效操作dom) 4 如何高效操作DOM {#_4-如何高效操作dom}
 
 **1. 为什么说 DOM 操作耗时**
 
@@ -5990,9 +5990,9 @@ const times = 10000;
 ```
 
 
-## [\#](#三、css基础){.header-anchor} 三、CSS基础 {#三、css基础}
+## [\#](#三、css基础) 三、CSS基础 {#三、css基础}
 
-### [\#](#_1-盒模型){.header-anchor} 1 盒模型 {#_1-盒模型}
+### [\#](#_1-盒模型) 1 盒模型 {#_1-盒模型}
 
 > content（元素内容） + padding（内边距） + border（边框） +
 > margin（外边距）
@@ -6005,7 +6005,7 @@ const times = 10000;
     `border`，`总宽度 = margin + width`
 -   `inherit`：从父元素继承 `box-sizing` 属性
 
-### [\#](#_2-bfc){.header-anchor} 2 BFC {#_2-bfc}
+### [\#](#_2-bfc) 2 BFC {#_2-bfc}
 
 > 块级格式化上下文，是一个独立的渲染区域，让处于 `BFC`
 > 内部的元素与外部的元素相互隔离，使内外元素的定位不会相互影响。
@@ -6038,7 +6038,7 @@ const times = 10000;
 -   自适应两栏布局
 -   可以阻止元素被浮动元素覆盖
 
-### [\#](#_3-层叠上下文){.header-anchor} 3 层叠上下文 {#_3-层叠上下文}
+### [\#](#_3-层叠上下文) 3 层叠上下文 {#_3-层叠上下文}
 
 > 元素提升为一个比较特殊的图层，在三维空间中 (z轴) 高出普通元素一等。
 
@@ -6059,7 +6059,7 @@ const times = 10000;
 -   在同一层叠上下文中，层叠等级才有意义
 -   `z-index`的优先级最高
 
-### [\#](#_4-左右居中方案){.header-anchor} 4 左右居中方案 {#_4-左右居中方案}
+### [\#](#_4-左右居中方案) 4 左右居中方案 {#_4-左右居中方案}
 
 -   行内元素: `text-align: center`
 -   定宽块状元素: 左右 `margin` 值为 `auto`
@@ -6094,7 +6094,7 @@ const times = 10000;
 ```
 
 
-### [\#](#_5-上下垂直居中方案){.header-anchor} 5 上下垂直居中方案 {#_5-上下垂直居中方案}
+### [\#](#_5-上下垂直居中方案) 5 上下垂直居中方案 {#_5-上下垂直居中方案}
 
 -   定高：`margin`，`position + margin`(负值)
 -   不定高：`position` +
@@ -6147,7 +6147,7 @@ const times = 10000;
 ```
 
 
-### [\#](#_6-选择器权重计算方式){.header-anchor} 6 选择器权重计算方式 {#_6-选择器权重计算方式}
+### [\#](#_6-选择器权重计算方式) 6 选择器权重计算方式 {#_6-选择器权重计算方式}
 
 > !important \> 内联样式 = 外联样式 \> ID选择器 \> 类选择器 = 伪类选择器
 > = 属性选择器 \> 元素选择器 = 伪元素选择器 \> 通配选择器 = 后代选择器 =
@@ -6165,7 +6165,7 @@ const times = 10000;
 
 > css选择器的解析原则：选择器定位DOM元素是从右往左的方向，这样可以尽早的过滤掉一些不必要的样式规则和元素
 
-### [\#](#_7-清除浮动){.header-anchor} 7 清除浮动 {#_7-清除浮动}
+### [\#](#_7-清除浮动) 7 清除浮动 {#_7-清除浮动}
 
 1.  在浮动元素后面添加 `clear:both`的空 `div` 元素
 
@@ -6235,7 +6235,7 @@ const times = 10000;
 
 > 推荐使用第三种方法，不会在页面新增div，文档结构更加清晰
 
-### [\#](#_8-左边定宽-右边自适应方案){.header-anchor} 8 左边定宽，右边自适应方案 {#_8-左边定宽-右边自适应方案}
+### [\#](#_8-左边定宽-右边自适应方案) 8 左边定宽，右边自适应方案 {#_8-左边定宽-右边自适应方案}
 
 > float + margin，float + calc
 
@@ -6262,7 +6262,7 @@ const times = 10000;
 ```
 
 
-### [\#](#_9-左右两边定宽-中间自适应){.header-anchor} 9 左右两边定宽，中间自适应 {#_9-左右两边定宽-中间自适应}
+### [\#](#_9-左右两边定宽-中间自适应) 9 左右两边定宽，中间自适应 {#_9-左右两边定宽-中间自适应}
 
 > float，`float + calc`, 圣杯布局（设置BFC，margin负值法），flex
 
@@ -6317,7 +6317,7 @@ const times = 10000;
 ```
 
 
-### [\#](#_10-css动画和过渡){.header-anchor} 10 CSS动画和过渡 {#_10-css动画和过渡}
+### [\#](#_10-css动画和过渡) 10 CSS动画和过渡 {#_10-css动画和过渡}
 
 **animation / keyframes**
 
@@ -6468,7 +6468,7 @@ eg:
 ```
 
 
-### [\#](#_11-css3的新特性){.header-anchor} 11 CSS3的新特性 {#_11-css3的新特性}
+### [\#](#_11-css3的新特性) 11 CSS3的新特性 {#_11-css3的新特性}
 
 -   `transition`：过渡
 -   `transform`: 旋转、缩放、移动或倾斜
@@ -6483,7 +6483,7 @@ eg:
 -   `box-sizing`: `content-box|border-box` 盒模型
 -   媒体查询 `@media screen and (max-width: 960px) {}`还有打印`print`
 
-### [\#](#_12-列举几个css中可继承和不可继承的元素){.header-anchor} 12 列举几个css中可继承和不可继承的元素 {#_12-列举几个css中可继承和不可继承的元素}
+### [\#](#_12-列举几个css中可继承和不可继承的元素) 12 列举几个css中可继承和不可继承的元素 {#_12-列举几个css中可继承和不可继承的元素}
 
 -   不可继承的：`display、margin、border、padding、background、height、min-height、max-height、width、min-width、max-width、overflow、position、left、right、top、bottom、z-index、float、clear、table-layout、vertical-align`
 -   所有元素可继承：`visibility`和`cursor`。
@@ -6495,9 +6495,9 @@ eg:
 
 > `Animation`和`transition`大部分属性是相同的，他们都是随时间改变元素的属性值，他们的主要区别是`transition`需要触发一个事件才能改变属性，而`animation`不需要触发任何事件的情况下才会随时间改变属性值，并且`transition`为2帧，从`from .... to`，而`animation`可以一帧一帧的
 
-## [\#](#四、浏览器){.header-anchor} 四、浏览器 {#四、浏览器}
+## [\#](#四、浏览器) 四、浏览器 {#四、浏览器}
 
-### [\#](#_1-浏览器架构){.header-anchor} 1 浏览器架构 {#_1-浏览器架构}
+### [\#](#_1-浏览器架构) 1 浏览器架构 {#_1-浏览器架构}
 
 **单进程浏览器时代**
 
@@ -6525,7 +6525,7 @@ eg:
 -   **网络进程**。主要负责页面的网络资源加载，之前是作为一个模块运行在浏览器进程里面的，直至最近才独立出来，成为一个单独的进程。
 -   **插件进程**。主要是负责插件的运行，因插件易崩溃，所以需要通过插件进程来隔离，以保证插件进程崩溃不会对浏览器和页面造成影响
 
-### [\#](#_2-javascript单线程模型){.header-anchor} 2 JavaScript单线程模型 {#_2-javascript单线程模型}
+### [\#](#_2-javascript单线程模型) 2 JavaScript单线程模型 {#_2-javascript单线程模型}
 
 > JavaScript语言的一大特点就是单线程，也就是说，同一时间只能做一件事，前面的任务没做完，后面的任务只能等着。
 
@@ -6582,7 +6582,7 @@ eg:
 > 是单线程的，同步执行任务会造成浏览器的阻塞，所以我们将 JS
 > 分成一个又一个的任务，通过不停的循环来执行事件队列中的任务。
 
-### [\#](#_3-chrome-打开一个页面需要启动多少进程-分别有哪些进程){.header-anchor} 3 Chrome 打开一个页面需要启动多少进程？分别有哪些进程？ {#_3-chrome-打开一个页面需要启动多少进程-分别有哪些进程}
+### [\#](#_3-chrome-打开一个页面需要启动多少进程-分别有哪些进程) 3 Chrome 打开一个页面需要启动多少进程？分别有哪些进程？ {#_3-chrome-打开一个页面需要启动多少进程-分别有哪些进程}
 
 打开 1 个页面至少需要 1 个网络进程、1 个浏览器进程、1 个 GPU 进程以及 1
 个渲染进程，共 4 个；最新的 Chrome 浏览器包括：1
@@ -6602,7 +6602,7 @@ eg:
 -   `网络进程`：主要负责页面的网络资源加载，之前是作为一个模块运行在浏览器进程里面的，直至最近才独立出来，成为一个单独的进程。
 -   `插件进程`：主要是负责插件的运行，因插件易崩溃，所以需要通过插件进程来隔离，以保证插件进程崩溃不会对浏览器和页面造成影响。
 
-### [\#](#_4-渲染机制){.header-anchor} 4 渲染机制 {#_4-渲染机制}
+### [\#](#_4-渲染机制) 4 渲染机制 {#_4-渲染机制}
 
 **1. 浏览器如何渲染网页**
 
@@ -6850,7 +6850,7 @@ for(let i = 0; i < 1000; i++) {
 -   将频繁运行的动画变为图层，图层能够阻止该节点回流影响别的元素。比如对于
     `video`标签，浏览器会自动将该节点变为图层。
 
-### [\#](#_5-缓存机制){.header-anchor} 5 缓存机制 {#_5-缓存机制}
+### [\#](#_5-缓存机制) 5 缓存机制 {#_5-缓存机制}
 
 **1. 首先得明确 http 缓存的好处**
 
@@ -7086,7 +7086,7 @@ ETag 和请求头部字段 If-None-Match。
 -   ETag（表示资源内容的唯一标识，随服务器response返回，仅根据文件内容是否变化判断）
 -   If-None-Match（服务器通过比较请求头部的If-None-Match与当前资源的ETag是否一致来判断资源是否在两次请求之间有过修改，如果没有修改，则命中协商缓存）
 
-### [\#](#_6-浏览器存储){.header-anchor} 6 浏览器存储 {#_6-浏览器存储}
+### [\#](#_6-浏览器存储) 6 浏览器存储 {#_6-浏览器存储}
 
 > 我们经常需要对业务中的一些数据进行存储，通常可以分为 短暂性存储 和
 > 持久性储存。
@@ -7145,7 +7145,7 @@ ETag 和请求头部字段 If-None-Match。
     是否仅被使用安全协议传输。安全协议。安全协议有 `HTTPS、SSL`
     等，在网络上传输数据之前先将数据加密。默认为 `false`。
 
-### [\#](#_7-跨域方案){.header-anchor} 7 跨域方案 {#_7-跨域方案}
+### [\#](#_7-跨域方案) 7 跨域方案 {#_7-跨域方案}
 
 > 很多种方法，但万变不离其宗，都是为了搞定同源策略。重用的有
 > `jsonp`、`iframe`、`cors`、`img`、`HTML5 postMessage`等等。其中用到
@@ -7226,7 +7226,7 @@ location / {
 ```
 
 
-### [\#](#_8-xss-和-csrf){.header-anchor} 8 XSS 和 CSRF {#_8-xss-和-csrf}
+### [\#](#_8-xss-和-csrf) 8 XSS 和 CSRF {#_8-xss-和-csrf}
 
 **1. XSS**
 
@@ -7469,7 +7469,7 @@ res.setHeader('Set-Cookie', `username=poetry2;sameSite = strict;path=/;httpOnly;
 
 > 防范：用户操作验证（验证码），额外验证机制（`token`使用）等
 
-### [\#](#_9-service-worker){.header-anchor} 9 Service Worker {#_9-service-worker}
+### [\#](#_9-service-worker) 9 Service Worker {#_9-service-worker}
 
 > `Service workers`
 > 本质上充当Web应用程序与浏览器之间的代理服务器，也可以在网络可用时作为浏览器和网络间的代理。它们旨在（除其他之外）使得能够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否驻留在服务器上来采取适当的动作。他们还允许访问推送通知和后台同步API
@@ -7531,7 +7531,7 @@ res.setHeader('Set-Cookie', `username=poetry2;sameSite = strict;path=/;httpOnly;
 > 当我们重新刷新页面可以发现我们缓存的数据是从 `Service` `Worker`
 > 中读取的
 
-### [\#](#_10-dom-节点操作){.header-anchor} 10 DOM 节点操作 {#_10-dom-节点操作}
+### [\#](#_10-dom-节点操作) 10 DOM 节点操作 {#_10-dom-节点操作}
 
 **（1）创建新节点**
 
@@ -7582,7 +7582,7 @@ getAttribute(key);
 ```
 
 
-### [\#](#_11-掌握页面的加载过程){.header-anchor} 11 掌握页面的加载过程 {#_11-掌握页面的加载过程}
+### [\#](#_11-掌握页面的加载过程) 11 掌握页面的加载过程 {#_11-掌握页面的加载过程}
 
 **网页加载流程**
 
@@ -7632,7 +7632,7 @@ getAttribute(key);
 -   `DOMContentLoaded` 事件触发代表初始的 `HTML`
     被完全加载和解析，不需要等待 `CSS`，`JS`，图片加载
 
-### [\#](#_12-从输入url到页面展示过程){.header-anchor} 12 从输入URL到页面展示过程 {#_12-从输入url到页面展示过程}
+### [\#](#_12-从输入url到页面展示过程) 12 从输入URL到页面展示过程 {#_12-从输入url到页面展示过程}
 
 **1. DNS域名解析**
 
@@ -7747,7 +7747,7 @@ getAttribute(key);
 
 最后，合成线程发送绘制图块命令给浏览器进程。浏览器进程根据指令生成页面，并显示到显示器上，渲染过程完成。
 
-### [\#](#_13-渲染引擎什么情况下才会为特定的节点创建新的图层){.header-anchor} 13 渲染引擎什么情况下才会为特定的节点创建新的图层 {#_13-渲染引擎什么情况下才会为特定的节点创建新的图层}
+### [\#](#_13-渲染引擎什么情况下才会为特定的节点创建新的图层) 13 渲染引擎什么情况下才会为特定的节点创建新的图层 {#_13-渲染引擎什么情况下才会为特定的节点创建新的图层}
 
 `层叠上下文`是HTML元素的三维概念，这些HTML元素在一条假想的相对于面向（电脑屏幕的）视窗或者网页的用户的z轴上延伸，HTML元素依据其自身属性按照优先级顺序占用层叠上下文的空间。
 
@@ -7782,7 +7782,7 @@ getAttribute(key);
 div
 区域。出现这种裁剪情况的时候，渲染引擎会为文字部分单独创建一个层，如果出现滚动条，滚动条也会被提升为单独的层。
 
-### [\#](#_14-定时器与requestanimationframe、requestidlecallback){.header-anchor} 14 定时器与requestAnimationFrame、requestIdleCallback {#_14-定时器与requestanimationframe、requestidlecallback}
+### [\#](#_14-定时器与requestanimationframe、requestidlecallback) 14 定时器与requestAnimationFrame、requestIdleCallback {#_14-定时器与requestanimationframe、requestidlecallback}
 
 **1. setTimeout**
 
@@ -7960,16 +7960,16 @@ requestID = window.requestAnimationFrame(callback);
 -   JS 动画, 用`requestAnimationFrame` 会比 `setInterval` 效果更好
 -   `requestIdleCallback()`常用来切割长任务，利用空闲时间执行，避免主线程长时间阻塞
 
-## [\#](#五、框架通识){.header-anchor} 五、框架通识 {#五、框架通识}
+## [\#](#五、框架通识) 五、框架通识 {#五、框架通识}
 
 [框架通识![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBmb2N1c2FibGU9ImZhbHNlIiB4PSIwcHgiIHk9IjBweCIgdmlld2JveD0iMCAwIDEwMCAxMDAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgY2xhc3M9Imljb24gb3V0Ym91bmQiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xOC44LDg1LjFoNTZsMCwwYzIuMiwwLDQtMS44LDQtNHYtMzJoLTh2MjhoLTQ4di00OGgyOHYtOGgtMzJsMCwwYy0yLjIsMC00LDEuOC00LDR2NTZDMTQuOCw4My4zLDE2LjYsODUuMSwxOC44LDg1LjF6Ij4KICAgICAgICAgICAgICAgICAgICAgICAgPC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBmaWxsPSJjdXJyZW50Q29sb3IiIHBvaW50cz0iNDUuNyw0OC43IDUxLjMsNTQuMyA3Ny4yLDI4LjUgNzcuMiwzNy4yIDg1LjIsMzcuMiA4NS4yLDE0LjkgNjIuOCwxNC45IDYyLjgsMjIuOSA3MS41LDIyLjkiPgogICAgICAgICAgICAgICAgICAgICAgICA8L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgPC9zdmc+){.icon
 .outbound} [(opens new
 window)]{.sr-only}](https://interview.poetries.top/excellent-docs/16-%E6%A1%86%E6%9E%B6%E9%80%9A%E8%AF%86.html){target="_blank"
 rel="noopener noreferrer"}
 
-## [\#](#六、vue){.header-anchor} 六、Vue {#六、vue}
+## [\#](#六、vue) 六、Vue {#六、vue}
 
-### [\#](#_1-vue-响应式原理){.header-anchor} 1 Vue 响应式原理 {#_1-vue-响应式原理}
+### [\#](#_1-vue-响应式原理) 1 Vue 响应式原理 {#_1-vue-响应式原理}
 
 > Vue 的响应式原理是核心是通过 ES5 的保护对象的 `Object.defindeProperty`
 > 中的访问器属性中的 get 和 set 方法，data
@@ -8167,7 +8167,7 @@ let p = new Proxy(target, handler);
     -   自身实例化的时候往`dep`对象中添加自己
     -   当数据变化`dep`通知所有的 `Watcher` 实例更新视图
 
-### [\#](#_2-发布订阅模式和观察者模式){.header-anchor} 2 发布订阅模式和观察者模式 {#_2-发布订阅模式和观察者模式}
+### [\#](#_2-发布订阅模式和观察者模式) 2 发布订阅模式和观察者模式 {#_2-发布订阅模式和观察者模式}
 
 **1. 发布/订阅模式**
 
@@ -8313,7 +8313,7 @@ class EventEmitter {
     式的订阅者与发布者之间是存在依赖的
 -   **发布/订阅模式**由统一调度中心调用，因此发布者和订阅者不需要知道对方的存在
 
-### [\#](#_3-为什么使用-virtual-dom){.header-anchor} 3 为什么使用 Virtual DOM {#_3-为什么使用-virtual-dom}
+### [\#](#_3-为什么使用-virtual-dom) 3 为什么使用 Virtual DOM {#_3-为什么使用-virtual-dom}
 
 -   手动操作 `DOM` 比较麻烦，还需要考虑浏览器兼容性问题，虽然有 `jQuery`
     等库简化 `DOM` 操作，但是随着项目的复杂 DOM 操作复杂提升
@@ -8334,7 +8334,7 @@ class EventEmitter {
 -   除了渲染 `DOM` 以外，还可以实现
     `SSR(Nuxt.js/Next.js)`、原生应用(`Weex/React Native`)、小程序(`mpvue/uni-app`)等
 
-### [\#](#_4-vdom-三个-part){.header-anchor} 4 VDOM：三个 part {#_4-vdom-三个-part}
+### [\#](#_4-vdom-三个-part) 4 VDOM：三个 part {#_4-vdom-三个-part}
 
 -   虚拟节点类，将真实 `DOM`节点用 `js` 对象的形式进行展示，并提供
     `render` 方法，将虚拟节点渲染成真实 `DOM`
@@ -8370,7 +8370,7 @@ class EventEmitter {
 > 综上，`Virtual DOM` 在性能上的收益并不是最主要的，更重要的是它使得
 > `Vue` 具备了现代框架应有的高级特性。
 
-### [\#](#_5-vue-和-react技术选型){.header-anchor} 5 vue 和 react技术选型 {#_5-vue-和-react技术选型}
+### [\#](#_5-vue-和-react技术选型) 5 vue 和 react技术选型 {#_5-vue-和-react技术选型}
 
 **相同点：**
 
@@ -8389,7 +8389,7 @@ class EventEmitter {
 
 > vue是采用webpack +vue-loader单文件组件格式，html, js, css同一个文件
 
-### [\#](#_6-nexttick){.header-anchor} 6 nextTick {#_6-nexttick}
+### [\#](#_6-nexttick) 6 nextTick {#_6-nexttick}
 
 > `nextTick` 可以让我们在下次 `DOM`
 > 更新循环结束之后执行延迟回调，用于获得更新后的 `DOM`
@@ -8403,7 +8403,7 @@ class EventEmitter {
 
 > 定义了一个异步方法，多次调用`nextTick`会将方法存入队列中，通过这个异步方法清空当前队列
 
-### [\#](#_7-生命周期){.header-anchor} 7 生命周期 {#_7-生命周期}
+### [\#](#_7-生命周期) 7 生命周期 {#_7-生命周期}
 
 ***init***
 
@@ -8534,7 +8534,7 @@ class EventEmitter {
 ```
 
 
-### [\#](#_8-vue-router){.header-anchor} 8 vue-router {#_8-vue-router}
+### [\#](#_8-vue-router) 8 vue-router {#_8-vue-router}
 
 **mode**
 
@@ -8656,7 +8656,7 @@ class EventEmitter {
 ```
 
 
-### [\#](#_9-vuex){.header-anchor} 9 vuex {#_9-vuex}
+### [\#](#_9-vuex) 9 vuex {#_9-vuex}
 
 > Vuex
 > 集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以可预测的方式发生变化
@@ -8834,7 +8834,7 @@ export default new Vuex.Store({
 ```
 
 
-### [\#](#_10-vue3带来的新特性-亮点){.header-anchor} 10 vue3带来的新特性/亮点 {#_10-vue3带来的新特性-亮点}
+### [\#](#_10-vue3带来的新特性-亮点) 10 vue3带来的新特性/亮点 {#_10-vue3带来的新特性-亮点}
 
 **1. 压缩包体积更小**
 
@@ -9090,7 +9090,7 @@ export default new Vuex.Store({
 
 > 在vue2中使用过TypesScript的童鞋应该有过体会，写起来实在是有点难受。vue3则是使用ts进行了重写，开发者使用vue3时拥有更好的类型支持和更好的编写体验。
 
-### [\#](#_11-compositon-api){.header-anchor} 11 Compositon api {#_11-compositon-api}
+### [\#](#_11-compositon-api) 11 Compositon api {#_11-compositon-api}
 
 `Composition API`也叫组合式API，是Vue3.x的新特性。
 
@@ -9136,7 +9136,7 @@ export default new Vuex.Store({
 
 > 虽然`Compositon API`看起来比`React Hook`好用，但是其设计思想也是借鉴`React Hook`的。
 
-### [\#](#_12-computed-的实现原理){.header-anchor} 12 computed 的实现原理 {#_12-computed-的实现原理}
+### [\#](#_12-computed-的实现原理) 12 computed 的实现原理 {#_12-computed-的实现原理}
 
 > `computed` 本质是一个惰性求值的观察者`computed watcher`。其内部通过
 > `this.dirty` 属性标记计算属性是否需要重新求值。
@@ -9151,7 +9151,7 @@ export default new Vuex.Store({
     (当计算属性依赖于其他数据时，属性并不会立即重新计算，只有之后其他地方需要读取属性的时候，它才会真正计算，即具备
     lazy（懒计算）特性。)
 
-### [\#](#_13-watch-的理解){.header-anchor} 13 watch 的理解 {#_13-watch-的理解}
+### [\#](#_13-watch-的理解) 13 watch 的理解 {#_13-watch-的理解}
 
 `watch`没有缓存性，更多的是观察的作用，可以监听某些数据执行回调。当我们需要`深度监听对象中`的属性时，可以打开deep：true选项，这样便会对对象中的每一项进行监听。这样会带来性能问题，优化的话可以使用字符串形式监听
 
@@ -9159,7 +9159,7 @@ export default new Vuex.Store({
 > watcher),`计算属性 watcher` (computed watcher),`侦听器 watcher`（user
 > watcher）三种
 
-### [\#](#_14-vue-渲染过程){.header-anchor} 14 vue 渲染过程 {#_14-vue-渲染过程}
+### [\#](#_14-vue-渲染过程) 14 vue 渲染过程 {#_14-vue-渲染过程}
 
 -   调用 `compile` 函数,生成 render 函数字符串 ,编译过程如下:
     -   parse
@@ -9172,7 +9172,7 @@ export default new Vuex.Store({
 -   调用 `patch` 方法,对比新旧 vnode 对象,通过 DOM diff
     算法,添加、修改、删除真正的 DOM 元素
 
-### [\#](#_15-说一说keep-alive实现原理){.header-anchor} 15 说一说keep-alive实现原理 {#_15-说一说keep-alive实现原理}
+### [\#](#_15-说一说keep-alive实现原理) 15 说一说keep-alive实现原理 {#_15-说一说keep-alive实现原理}
 
 > keep-alive`组件接受三个属性参数：`include`、`exclude`、`max
 
@@ -9189,7 +9189,7 @@ export default new Vuex.Store({
 `LRU（Least recently used）`
 算法根据数据的历史访问记录来进行淘汰数据，其核心思想是"如果数据最近被访问过，那么将来被访问的几率也更高"。(墨菲定律：越担心的事情越会发生)
 
-### [\#](#_16-为什么访问data属性不需要带data){.header-anchor} 16 为什么访问data属性不需要带data {#_16-为什么访问data属性不需要带data}
+### [\#](#_16-为什么访问data属性不需要带data) 16 为什么访问data属性不需要带data {#_16-为什么访问data属性不需要带data}
 
 > vue中访问属性代理 `this.data.xxx` 转换 `this.xxx` 的实现
 
@@ -9212,7 +9212,7 @@ export default new Vuex.Store({
 ```
 
 
-### [\#](#_17-template预编译是什么){.header-anchor} 17 template预编译是什么 {#_17-template预编译是什么}
+### [\#](#_17-template预编译是什么) 17 template预编译是什么 {#_17-template预编译是什么}
 
 对于 Vue
 组件来说，模板编译只会在组件实例化的时候编译一次，生成渲染函数之后在也不会进行编译。因此，编译对组件的
@@ -9223,7 +9223,7 @@ runtime 是一种性能损耗。
 > runtime
 > 时直接跳过模板渲染，进而提升性能，这个在项目构建的编译template的过程，就是预编译。
 
-### [\#](#_18-介绍一下vue中的diff算法){.header-anchor} 18 介绍一下Vue中的Diff算法 {#_18-介绍一下vue中的diff算法}
+### [\#](#_18-介绍一下vue中的diff算法) 18 介绍一下Vue中的Diff算法 {#_18-介绍一下vue中的diff算法}
 
 在新老虚拟DOM对比时
 
@@ -9234,7 +9234,7 @@ runtime 是一种性能损耗。
 
 > 在diff中，只对同层的子节点进行比较，放弃跨级的节点比较，使得时间复杂从O(n\^3)降低值O(n)，也就是说，只有当新旧children都为多个子节点时才需要用核心的Diff算法进行同层级比较。
 
-### [\#](#_19-说说vue2-0和vue3-0有什么区别){.header-anchor} 19 说说Vue2.0和Vue3.0有什么区别 {#_19-说说vue2-0和vue3-0有什么区别}
+### [\#](#_19-说说vue2-0和vue3-0有什么区别) 19 说说Vue2.0和Vue3.0有什么区别 {#_19-说说vue2-0和vue3-0有什么区别}
 
 -   重构响应式系统，使用`Proxy`替换`Object.defineProperty`，使用`Proxy`优势：
     -   可直接监听数组类型的数据变化
@@ -9249,9 +9249,9 @@ runtime 是一种性能损耗。
 -   代码结构调整，更便于Tree shaking，使得体积更小
 -   使用Typescript替换Flow
 
-## [\#](#七、react){.header-anchor} 七、React {#七、react}
+## [\#](#七、react) 七、React {#七、react}
 
-### [\#](#_0-对虚拟dom的理解){.header-anchor} 0 对虚拟DOM的理解 {#_0-对虚拟dom的理解}
+### [\#](#_0-对虚拟dom的理解) 0 对虚拟DOM的理解 {#_0-对虚拟dom的理解}
 
 > `虚拟dom从来不是用来和直接操作dom对比的`，它们俩最终殊途同归。`虚拟dom只不过是局部更新的一个环节而已`，整个环节的对比对象是全量更新。虚拟dom对于state＝UI的意义是，虚拟dom使diff成为可能（理论上也可以直接用dom对象diff，但是太臃肿），促进了新的开发思想，又不至于性能太差。但是性能再好也不可能好过直接操作dom，人脑连diff都省了。还有一个很重要的意义是，`对视图抽象，为跨平台助力`
 
@@ -9264,7 +9264,7 @@ DOM 的优势，无异于南辕北辙。偏偏在面试场景下，10 个人里�
 window)]{.sr-only}](http://interview.poetries.top/principle-docs/react/15-%E7%9C%9F%E6%AD%A3%E7%90%86%E8%A7%A3%E8%99%9A%E6%8B%9FDOM.html){target="_blank"
 rel="noopener noreferrer"}
 
-### [\#](#_1-谈谈你对react的理解){.header-anchor} 1 谈谈你对React的理解 {#_1-谈谈你对react的理解}
+### [\#](#_1-谈谈你对react的理解) 1 谈谈你对React的理解 {#_1-谈谈你对react的理解}
 
 > React 是一个网页 UI
 > 框架，通过组件化的方式解决视图层开发复用的问题，本质是一个组件化框架。
@@ -9282,7 +9282,7 @@ rel="noopener noreferrer"}
 -   承接在优势后，可以再谈一下自己对于 React 优化的看法、对虚拟 DOM
     的看法
 
-### [\#](#_2-如何避免react生命周期中的坑){.header-anchor} 2 如何避免React生命周期中的坑 {#_2-如何避免react生命周期中的坑}
+### [\#](#_2-如何避免react生命周期中的坑) 2 如何避免React生命周期中的坑 {#_2-如何避免react生命周期中的坑}
 
 **16.3版本**
 
@@ -9372,7 +9372,7 @@ commit 阶段又被细分为了
 >     window)]{.sr-only}](https://interview.poetries.top/principle-docs/react/12-React16%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9B%B4%E6%94%B9%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8B.html){target="_blank"
 >     rel="noopener noreferrer"}
 
-### [\#](#_3-react-fiber架构){.header-anchor} 3 React Fiber架构 {#_3-react-fiber架构}
+### [\#](#_3-react-fiber架构) 3 React Fiber架构 {#_3-react-fiber架构}
 
 **最主要的思想就是将任务拆分**。
 
@@ -9695,7 +9695,7 @@ class Fiber {
 > -   当遇到进程阻塞的问题时，任务分割、异步调用 和 缓存策略
 >     是三个显著的解决思路。
 
-### [\#](#_4-createelement过程){.header-anchor} 4 createElement过程 {#_4-createelement过程}
+### [\#](#_4-createelement过程) 4 createElement过程 {#_4-createelement过程}
 
 > React.createElement()： 根据指定的第一个参数创建一个React元素
 
@@ -9739,7 +9739,7 @@ React.createElement(
 ```
 
 
-### [\#](#_5-调和阶段-setstate内部干了什么){.header-anchor} 5 调和阶段 setState内部干了什么 {#_5-调和阶段-setstate内部干了什么}
+### [\#](#_5-调和阶段-setstate内部干了什么) 5 调和阶段 setState内部干了什么 {#_5-调和阶段-setstate内部干了什么}
 
 -   当调用 setState 时，React会做的第一件事情是将传递给 setState
     的对象合并到组件的当前状态
@@ -9753,7 +9753,7 @@ React.createElement(
 > 将会知道发生的确切变化，并且通过了解发生什么变化，只需在绝对必要的情况下进行更新即可最小化
 > UI 的占用空间
 
-### [\#](#_6-setstate){.header-anchor} 6 setState {#_6-setstate}
+### [\#](#_6-setstate) 6 setState {#_6-setstate}
 
 > 在了解setState之前，我们先来简单了解下 React 一个包装结构:
 > Transaction:
@@ -10004,7 +10004,7 @@ class Test extends Component {
 DOM，触发渲染。所以`回调时，state 已经合并计算完成了`，输出的结果就是
 `2,2` 了。
 
-### [\#](#_7-setstate原理分析){.header-anchor} 7 setState原理分析 {#_7-setstate原理分析}
+### [\#](#_7-setstate原理分析) 7 setState原理分析 {#_7-setstate原理分析}
 
 **1. setState异步更新**
 
@@ -10094,9 +10094,9 @@ componentDidUpdate(){
 -   调用`setState`更新`this.state`不是马上生效的，它是异步的，所以不要天真以为执行完`setState`后`this.state`就是最新的值了
 -   多个顺序执行的`setState`不是同步地一个一个执行滴，会一个一个加入队列，然后最后一起执行，即批处理
 
-### [\#](#_8-react事务机制){.header-anchor} 8 React事务机制 {#_8-react事务机制}
+### [\#](#_8-react事务机制) 8 React事务机制 {#_8-react事务机制}
 
-### [\#](#_9-react组件和渲染更新过程){.header-anchor} 9 React组件和渲染更新过程 {#_9-react组件和渲染更新过程}
+### [\#](#_9-react组件和渲染更新过程) 9 React组件和渲染更新过程 {#_9-react组件和渲染更新过程}
 
 **渲染和更新过程**
 
@@ -10122,7 +10122,7 @@ componentDidUpdate(){
 -   `render`生成`newVnode`
 -   `patch(vnode, newVnode)`
 
-### [\#](#_10-如何解释-react-的渲染流程){.header-anchor} 10 如何解释 React 的渲染流程 {#_10-如何解释-react-的渲染流程}
+### [\#](#_10-如何解释-react-的渲染流程) 10 如何解释 React 的渲染流程 {#_10-如何解释-react-的渲染流程}
 
 -   React 的渲染过程大致一致，但协调并不相同，以 `React 16`
     为分界线，分为 `Stack Reconciler` 和
@@ -10162,7 +10162,7 @@ componentDidUpdate(){
     的设计会占用占主线程，造成卡顿，而 `fiber reconciler`
     的设计则能带来高性能的表现
 
-### [\#](#_11-diff算法是怎么运作){.header-anchor} 11 diff算法是怎么运作 {#_11-diff算法是怎么运作}
+### [\#](#_11-diff算法是怎么运作) 11 diff算法是怎么运作 {#_11-diff算法是怎么运作}
 
 > 每一种节点类型有自己的属性，也就是prop，每次进行diff的时候，react会先比较该节点类型，假如节点类型不一样，那么react会直接删除该节点，然后直接创建新的节点插入到其中，假如节点类型一样，那么会比较prop是否有更新，假如有prop不一样，那么react会判定该节点有更新，那么重渲染该节点，然后在对其子节点进行比较，一层一层往下，直到没有子节点
 
@@ -10362,7 +10362,7 @@ DOM中真正变化的部分，并只针对该部分进行原生DOM操作，而�
 -   设置 `shouldComponentUpdate` 或者 `React.pureComponet` 减少 `diff`
     次数。
 
-### [\#](#_12-合成事件原理){.header-anchor} 12 合成事件原理 {#_12-合成事件原理}
+### [\#](#_12-合成事件原理) 12 合成事件原理 {#_12-合成事件原理}
 
 > 为了解决跨浏览器兼容性问题，`React`
 > 会将浏览器原生事件（`Browser Native Event`）封装为合成事件（`SyntheticEvent`）传入设置的事件处理器中。这里的合成事件提供了与原生事件相同的接口，不过它们屏蔽了底层浏览器的细节差异，保证了行为的一致性。另外有意思的是，`React`
@@ -10496,7 +10496,7 @@ DOM中真正变化的部分，并只针对该部分进行原生DOM操作，而�
 -   方便事件的统一管理（事务机制）
 -   dispatchEvent事件机制
 
-### [\#](#_13-jsx语法糖本质){.header-anchor} 13 JSX语法糖本质 {#_13-jsx语法糖本质}
+### [\#](#_13-jsx语法糖本质) 13 JSX语法糖本质 {#_13-jsx语法糖本质}
 
 > JSX是语法糖，通过babel转成`React.createElement`函数，在babel官网上可以在线把JSX转成React的JS语法
 
@@ -10834,7 +10834,7 @@ const AppJSX = (<div className="App">
 `DOM` 的描述，也就是老生常谈的"虚拟 DOM"（准确地说，是虚拟 `DOM`
 中的一个节点)
 
-### [\#](#_14-为什么-react-元素有一个-typeof-属性){.header-anchor} 14 为什么 React 元素有一个 \$\$typeof 属性 {#_14-为什么-react-元素有一个-typeof-属性}
+### [\#](#_14-为什么-react-元素有一个-typeof-属性) 14 为什么 React 元素有一个 \$\$typeof 属性 {#_14-为什么-react-元素有一个-typeof-属性}
 
 > 目的是为了防止 XSS 攻击。因为 Synbol 无法被序列化，所以 React
 > 可以通过有没有 \$\$typeof 属性来断出当前的 element
@@ -10865,7 +10865,7 @@ const AppJSX = (<div className="App">
 ```
 
 
-### [\#](#_15-virtual-dom-的工作原理是什么){.header-anchor} 15 Virtual DOM 的工作原理是什么 {#_15-virtual-dom-的工作原理是什么}
+### [\#](#_15-virtual-dom-的工作原理是什么) 15 Virtual DOM 的工作原理是什么 {#_15-virtual-dom-的工作原理是什么}
 
 -   虚拟 DOM 的工作原理是`通过 JS 对象模拟 DOM 的节点`。在 Facebook 构建
     React 初期时，考虑到要提升代码抽象能力、避免人为的 DOM
@@ -10897,7 +10897,7 @@ const AppJSX = (<div className="App">
 
 > 借助虚拟dom,服务器中没有dom概念的，react巧妙的借助虚拟dom，然后可以在服务器中nodejs可以运行起来react代码。
 
-### [\#](#_16-react有哪些优化性能的手段){.header-anchor} 16 React有哪些优化性能的手段 {#_16-react有哪些优化性能的手段}
+### [\#](#_16-react有哪些优化性能的手段) 16 React有哪些优化性能的手段 {#_16-react有哪些优化性能的手段}
 
 **类组件中的优化手段**
 
@@ -10947,7 +10947,7 @@ import React, { lazy, Suspense } from "react";
 ```
 
 
-### [\#](#_17-redux实现原理解析){.header-anchor} 17 Redux实现原理解析 {#_17-redux实现原理解析}
+### [\#](#_17-redux实现原理解析) 17 Redux实现原理解析 {#_17-redux实现原理解析}
 
 > `在 Redux 的整个工作过程中，数据流是严格单向的`。这一点一定一定要背下来，面试的时候也一定一定要记得说
 
@@ -11843,7 +11843,7 @@ import 'babel-core/polyfill'
 
 > 这样就完成了`redux`的异步操作。其实最主要的区别还是`action`里面还有中间件的调用，其他的地方基本跟同步的`redux`差不多的。搞懂了中间件，就基本搞懂了`redux`的异步操作
 
-### [\#](#_18-谈谈你对状态管理的理解){.header-anchor} 18 谈谈你对状态管理的理解 {#_18-谈谈你对状态管理的理解}
+### [\#](#_18-谈谈你对状态管理的理解) 18 谈谈你对状态管理的理解 {#_18-谈谈你对状态管理的理解}
 
 -   首先介绍 Flux，Flux 是一种使用单向数据流的形式来组合 React
     组件的应用架构。
@@ -11890,7 +11890,7 @@ import 'babel-core/polyfill'
 -   Mobx 在开发项目时简单快速，但应用 Mobx 的场景 ，其实完全可以用 Vue
     取代。如果纯用 Vue，体积还会更小巧
 
-### [\#](#_19-connect组件原理分析){.header-anchor} 19 connect组件原理分析 {#_19-connect组件原理分析}
+### [\#](#_19-connect组件原理分析) 19 connect组件原理分析 {#_19-connect组件原理分析}
 
 **1. connect用法**
 
@@ -11999,7 +11999,7 @@ mapDispatchToProps(dispatch, ownProps): dispatchProps
 ```
 
 
-### [\#](#_20-react-hooks){.header-anchor} 20 React Hooks {#_20-react-hooks}
+### [\#](#_20-react-hooks) 20 React Hooks {#_20-react-hooks}
 
 -   代码逻辑聚合，逻辑复用
 -   HOC嵌套地狱
@@ -12249,7 +12249,7 @@ ESLint 的 Hooks 检查插件进行预防。
     `useEffect`，一般问题不大；如果页面有异常，再直接替换为
     `useLayoutEffect` 即可。
 
-### [\#](#_21-受控组件和非受控组件){.header-anchor} 21 受控组件和非受控组件 {#_21-受控组件和非受控组件}
+### [\#](#_21-受控组件和非受控组件) 21 受控组件和非受控组件 {#_21-受控组件和非受控组件}
 
 
 ```html
@@ -12264,11 +12264,11 @@ ESLint 的 Hooks 检查插件进行预防。
 -   第二个只是传递了默认的初时值，并没有传onchange事件，
 -   非受控组件是一种反模式，它的值不受组件自身的state或props控制
 
-### [\#](#_22-如何避免ajax数据请求重新获取){.header-anchor} 22 如何避免ajax数据请求重新获取 {#_22-如何避免ajax数据请求重新获取}
+### [\#](#_22-如何避免ajax数据请求重新获取) 22 如何避免ajax数据请求重新获取 {#_22-如何避免ajax数据请求重新获取}
 
 > 一般而言，ajax请求的数据都放在redux中存取。
 
-### [\#](#_23-组件之间通信){.header-anchor} 23 组件之间通信 {#_23-组件之间通信}
+### [\#](#_23-组件之间通信) 23 组件之间通信 {#_23-组件之间通信}
 
 -   父子组件通信
 -   自定义事件
@@ -12300,7 +12300,7 @@ ESLint 的 Hooks 检查插件进行预防。
     -   第三个是使用状态管理框架，比如 Flux、Redux 及
         Mobx。优点是由于引入了状态管理，使得项目的开发模式与代码结构得以约束，缺点是学习成本相对较高
 
-### [\#](#_24-类组件与函数组件有什么区别呢){.header-anchor} 24 类组件与函数组件有什么区别呢？ {#_24-类组件与函数组件有什么区别呢}
+### [\#](#_24-类组件与函数组件有什么区别呢) 24 类组件与函数组件有什么区别呢？ {#_24-类组件与函数组件有什么区别呢}
 
 -   作为组件而言，类组件与函数组件在使用与呈现上没有任何不同，性能上在现代浏览器中也不会有明显差异
 -   它们在开发时的心智模型上却存在巨大的差异。类组件是基于面向对象编程的，它主打的是继承、生命周期等核心概念；而函数组件内核是函数式编程，主打的是
@@ -12318,7 +12318,7 @@ ESLint 的 Hooks 检查插件进行预防。
     Hooks 的基础上提供了比原先更细粒度的逻辑组织与复用，更能适应 React
     的未来发展。
 
-### [\#](#_25-如何设计react组件){.header-anchor} 25 如何设计React组件 {#_25-如何设计react组件}
+### [\#](#_25-如何设计react组件) 25 如何设计React组件 {#_25-如何设计react组件}
 
 React 组件应从`设计与工程实践`两个方向进行探讨
 
@@ -12335,7 +12335,7 @@ React 组件应从`设计与工程实践`两个方向进行探讨
     文件夹放展示组件，由于展示组件本身与业务关联性较低，所以可以使用
     Storybook 进行组件的开发管理，提升项目的工程化管理能力
 
-### [\#](#_26-组件的协同及-不-可控组件){.header-anchor} 26 组件的协同及（不）可控组件 {#_26-组件的协同及-不-可控组件}
+### [\#](#_26-组件的协同及-不-可控组件) 26 组件的协同及（不）可控组件 {#_26-组件的协同及-不-可控组件}
 
 **为什么要进行组件的协同**
 
@@ -12403,7 +12403,7 @@ React 组件应从`设计与工程实践`两个方向进行探讨
 -   数据存储在`state`中，便于获取
 -   便于处理数据
 
-### [\#](#_27-react-router-的实现原理及工作方式分别是什么){.header-anchor} 27 React-Router 的实现原理及工作方式分别是什么 {#_27-react-router-的实现原理及工作方式分别是什么}
+### [\#](#_27-react-router-的实现原理及工作方式分别是什么) 27 React-Router 的实现原理及工作方式分别是什么 {#_27-react-router-的实现原理及工作方式分别是什么}
 
 -   `React Router` 路由的基础实现原理分为两种，如果是`切换 Hash`
     的方式，那么依靠浏览器 `Hash` 变化即可；如果是切换网址中的
@@ -12432,7 +12432,7 @@ router原理分析![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53
 window)]{.sr-only}](http://interview.poetries.top/principle-docs/react/01-React-router%E5%8E%9F%E7%90%86.html){target="_blank"
 rel="noopener noreferrer"}
 
-### [\#](#_28-react-17-带来了哪些改变){.header-anchor} 28 React 17 带来了哪些改变 {#_28-react-17-带来了哪些改变}
+### [\#](#_28-react-17-带来了哪些改变) 28 React 17 带来了哪些改变 {#_28-react-17-带来了哪些改变}
 
 > 最重要的是以下三点：
 
@@ -12588,9 +12588,9 @@ function handleChange(e) {
 `Lane 模型`提供了一个新的优先级排序的思路，相对于 `expirationTime`
 来说，它对优先级的处理会更细腻，能够覆盖更多的边界条件。
 
-## [\#](#八、性能){.header-anchor} 八、性能 {#八、性能}
+## [\#](#八、性能) 八、性能 {#八、性能}
 
-### [\#](#_1-dns-预解析){.header-anchor} 1 DNS 预解析 {#_1-dns-预解析}
+### [\#](#_1-dns-预解析) 1 DNS 预解析 {#_1-dns-预解析}
 
 -   `DNS` 解析也是需要时间的，可以通过预解析的方式来预先获得域名所对应的
     `IP`
@@ -12602,7 +12602,7 @@ function handleChange(e) {
 ```
 
 
-### [\#](#_2-缓存){.header-anchor} 2 缓存 {#_2-缓存}
+### [\#](#_2-缓存) 2 缓存 {#_2-缓存}
 
 -   缓存对于前端性能优化来说是个很重要的点，良好的缓存策略可以降低资源的重复加载提高网页的整体加载速度
 -   通常浏览器缓存策略分为两种：强缓存和协商缓存
@@ -12664,7 +12664,7 @@ Cache-control: max-age=30
 -   对于代码文件来说，通常使用 `Cache-Control: max-age=31536000`
     并配合策略缓存使用，然后对文件进行指纹处理，一旦文件名变动就会立刻下载新的文件
 
-### [\#](#_3-使用-http-2-0){.header-anchor} 3 使用 HTTP / 2.0 {#_3-使用-http-2-0}
+### [\#](#_3-使用-http-2-0) 3 使用 HTTP / 2.0 {#_3-使用-http-2-0}
 
 -   因为浏览器会有并发请求限制，在 `HTTP / 1.1`
     时代，每个请求都需要建立和断开，消耗了好几个 `RTT` 时间，并且由于
@@ -12673,7 +12673,7 @@ Cache-control: max-age=30
     链接，极大的加快了网页的加载速度。并且还支持 `Header`
     压缩，进一步的减少了请求的数据大小
 
-### [\#](#_4-预加载){.header-anchor} 4 预加载 {#_4-预加载}
+### [\#](#_4-预加载) 4 预加载 {#_4-预加载}
 
 -   在开发中，可能会遇到这样的情况。有些资源不需要马上用到，但是希望尽早获取，这时候就可以使用预加载
 -   预加载其实是声明式的 `fetch` ，强制浏览器请求资源，并且不会阻塞
@@ -12688,7 +12688,7 @@ Cache-control: max-age=30
 
 > 预加载可以一定程度上降低首屏的加载时间，因为可以将一些不影响首屏但重要的文件延后加载，唯一缺点就是兼容性不好
 
-### [\#](#_5-预渲染){.header-anchor} 5 预渲染 {#_5-预渲染}
+### [\#](#_5-预渲染) 5 预渲染 {#_5-预渲染}
 
 > 可以通过预渲染将下载的文件预先在后台渲染，可以使用以下代码开启预渲染
 
@@ -12709,7 +12709,7 @@ Cache-control: max-age=30
 -   `prefetch`
     加载的资源一般不是用于当前页面的，是未来很可能用到的这样一些资源
 
-### [\#](#_6-懒执行与懒加载){.header-anchor} 6 懒执行与懒加载 {#_6-懒执行与懒加载}
+### [\#](#_6-懒执行与懒加载) 6 懒执行与懒加载 {#_6-懒执行与懒加载}
 
 **懒执行**
 
@@ -12726,7 +12726,7 @@ Cache-control: max-age=30
 
 -   懒加载不仅可以用于图片，也可以使用在别的资源上。比如进入可视区域才开始播放视频等
 
-### [\#](#_7-文件优化){.header-anchor} 7 文件优化 {#_7-文件优化}
+### [\#](#_7-文件优化) 7 文件优化 {#_7-文件优化}
 
 **图片优化**
 
@@ -12772,7 +12772,7 @@ Cache-control: max-age=30
 > 域名。对于 `CDN` 加载静态资源需要注意 `CDN`
 > 域名要与主站不同，否则每次请求都会带上主站的 `Cookie`
 
-### [\#](#_8-其他){.header-anchor} 8 其他 {#_8-其他}
+### [\#](#_8-其他) 8 其他 {#_8-其他}
 
 **使用 Webpack 优化项目**
 
@@ -12799,7 +12799,7 @@ Cache-control: max-age=30
 -   对于捕获的错误需要上传给服务器，通常可以通过 `img` 标签的
     `src`发起一个请求
 
-### [\#](#_9-如何根据chrome的timing优化){.header-anchor} 9 如何根据chrome的timing优化 {#_9-如何根据chrome的timing优化}
+### [\#](#_9-如何根据chrome的timing优化) 9 如何根据chrome的timing优化 {#_9-如何根据chrome的timing优化}
 
 **性能优化API**
 
@@ -12871,7 +12871,7 @@ window.onload = function(){
 -   也可以按需加载，在逻辑中，只有执行到时才做请求
 -   对于多屏页面，滚动时才动态载入图片
 
-### [\#](#_10-移动端优化){.header-anchor} 10 移动端优化 {#_10-移动端优化}
+### [\#](#_10-移动端优化) 10 移动端优化 {#_10-移动端优化}
 
 **1. 概述**
 
@@ -13044,9 +13044,9 @@ Float在渲染时计算量比较大，尽量减少使用
 
 > `CSS`中以下属性（`CSS3 transitions`、`CSS3 3D transforms`、`Opacity`、`Canvas`、`WebGL`、`Video`）来触发`GPU`渲染，请合理使用
 
-## [\#](#九、工程化){.header-anchor} 九、工程化 {#九、工程化}
+## [\#](#九、工程化) 九、工程化 {#九、工程化}
 
-### [\#](#_1-介绍一下-webpack-的构建流程){.header-anchor} 1 介绍一下 webpack 的构建流程 {#_1-介绍一下-webpack-的构建流程}
+### [\#](#_1-介绍一下-webpack-的构建流程) 1 介绍一下 webpack 的构建流程 {#_1-介绍一下-webpack-的构建流程}
 
 **核心概念**
 
@@ -13168,7 +13168,7 @@ Float在渲染时计算量比较大，尽量减少使用
 
 **webpack详细工作流程**
 
-### [\#](#_2-介绍-loader){.header-anchor} 2 介绍 Loader {#_2-介绍-loader}
+### [\#](#_2-介绍-loader) 2 介绍 Loader {#_2-介绍-loader}
 
 **常用 Loader:**
 
@@ -13194,7 +13194,7 @@ Float在渲染时计算量比较大，尽量减少使用
     Webpack制定的设计规则和结构，输入与输出均为字符串，各个 Loader
     完全独立，即插即用；
 
-### [\#](#_3-介绍-plugin){.header-anchor} 3 介绍 plugin {#_3-介绍-plugin}
+### [\#](#_3-介绍-plugin) 3 介绍 plugin {#_3-介绍-plugin}
 
 > 插件系统是 Webpack
 > 成功的一个关键性因素。在编译的整个生命周期中，Webpack
@@ -13313,7 +13313,7 @@ const { SyncHook } = require("tapable")
 -   `mini-css-extrcat-plugin` 抽离CSS代码，放到一个单独的文件中
 -   `optimize-css-assets-plugin` 压缩css
 
-### [\#](#_4-webpack-热更新实现原理){.header-anchor} 4 webpack 热更新实现原理 {#_4-webpack-热更新实现原理}
+### [\#](#_4-webpack-热更新实现原理) 4 webpack 热更新实现原理 {#_4-webpack-热更新实现原理}
 
 **HMR 的基本流程图**
 
@@ -13325,7 +13325,7 @@ const { SyncHook } = require("tapable")
 -   `HMR`
     运行时替换更新中的模块，如果确定这些模块无法更新，则触发整个页面刷新
 
-### [\#](#_5-webpack-层面如何做性能优化){.header-anchor} 5 webpack 层面如何做性能优化 {#_5-webpack-层面如何做性能优化}
+### [\#](#_5-webpack-层面如何做性能优化) 5 webpack 层面如何做性能优化 {#_5-webpack-层面如何做性能优化}
 
 **优化前的准备工作**
 
@@ -13449,7 +13449,7 @@ var fn = function() {
     -   创建函数作用域更小
     -   代码可读性更好
 
-### [\#](#_6-介绍一下-tree-shaking){.header-anchor} 6 介绍一下 Tree Shaking {#_6-介绍一下-tree-shaking}
+### [\#](#_6-介绍一下-tree-shaking) 6 介绍一下 Tree Shaking {#_6-介绍一下-tree-shaking}
 
 **对tree-shaking的了解**
 
@@ -13510,11 +13510,11 @@ shaking不适用**。因为它是不可能确定哪些模块实际运行之前�
 ```
 
 
-### [\#](#_7-介绍一下-webpack-scope-hosting){.header-anchor} 7 介绍一下 webpack scope hosting {#_7-介绍一下-webpack-scope-hosting}
+### [\#](#_7-介绍一下-webpack-scope-hosting) 7 介绍一下 webpack scope hosting {#_7-介绍一下-webpack-scope-hosting}
 
 > 作用域提升，将分散的模块划分到同一个作用域中，避免了代码的重复引入，有效减少打包后的代码体积和运行时的内存损耗；
 
-### [\#](#_8-webpack-proxy工作原理-为什么能解决跨域){.header-anchor} 8 Webpack Proxy工作原理？为什么能解决跨域 {#_8-webpack-proxy工作原理-为什么能解决跨域}
+### [\#](#_8-webpack-proxy工作原理-为什么能解决跨域) 8 Webpack Proxy工作原理？为什么能解决跨域 {#_8-webpack-proxy工作原理-为什么能解决跨域}
 
 **1. 是什么**
 
@@ -13608,7 +13608,7 @@ const express = require('express');
 
 > 注意：`「服务器与服务器之间请求数据并不会存在跨域行为，跨域行为是浏览器安全策略限制」`
 
-### [\#](#_9-介绍一下-babel原理){.header-anchor} 9 介绍一下 babel原理 {#_9-介绍一下-babel原理}
+### [\#](#_9-介绍一下-babel原理) 9 介绍一下 babel原理 {#_9-介绍一下-babel原理}
 
 > `babel`
 > 的编译过程分为三个阶段：**parsing**、**transforming**、**generating**，以
@@ -13625,7 +13625,7 @@ const express = require('express');
 window)]{.sr-only}](http://interview.poetries.top/principle-docs/webpack/05-Babel%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E4%BD%BF%E7%94%A8.html){target="_blank"
 rel="noopener noreferrer"}
 
-### [\#](#_10-介绍一下rollup){.header-anchor} 10 介绍一下Rollup {#_10-介绍一下rollup}
+### [\#](#_10-介绍一下rollup) 10 介绍一下Rollup {#_10-介绍一下rollup}
 
 > Rollup 是一款 ES Modules
 > 打包器。它也可以将项目中散落的细小模块打包为整块代码，从而使得这些划分的模块可以更好地运行在浏览器环境或者
@@ -13658,9 +13658,9 @@ rel="noopener noreferrer"}
 不过这并不是绝对的标准，只是经验法则。因为 Rollup
 也可用于构建绝大多数应用程序，而 Webpack 同样也可以构建类库或者框架。
 
-## [\#](#十、http){.header-anchor} 十、HTTP {#十、http}
+## [\#](#十、http) 十、HTTP {#十、http}
 
-### [\#](#http状态码){.header-anchor} HTTP状态码
+### [\#](#http状态码) HTTP状态码
 
 -   1xx 信息性状态码 websocket upgrade
 -   2xx 成功状态码
@@ -13686,7 +13686,7 @@ rel="noopener noreferrer"}
     -   503 服务不可用：服务器目前无法使用
     -   504 网关超时：网关或代理服务器，未及时获取请求
 
-### [\#](#_1-http前生今世){.header-anchor} 1 HTTP前生今世 {#_1-http前生今世}
+### [\#](#_1-http前生今世) 1 HTTP前生今世 {#_1-http前生今世}
 
 -   `HTTP` 协议始于三十年前蒂姆·伯纳斯 - 李的一篇论文
 -   `HTTP/0.9` 是个简单的文本协议，只能获取文本资源；
@@ -13695,7 +13695,7 @@ rel="noopener noreferrer"}
 -   `HTTP/2` 基于 Google 的 `SPDY` 协议，注重性能改善，但还未普及；
 -   `HTTP/3` 基于 Google 的 `QUIC` 协议，是将来的发展方向
 
-### [\#](#_2-http世界全览){.header-anchor} 2 HTTP世界全览 {#_2-http世界全览}
+### [\#](#_2-http世界全览) 2 HTTP世界全览 {#_2-http世界全览}
 
 -   互联网上绝大部分资源都使用 `HTTP` 协议传输；
 -   浏览器是 HTTP 协议里的请求方，即 `User Agent`；
@@ -13712,7 +13712,7 @@ rel="noopener noreferrer"}
     套了一个安全的外壳；
 -   代理是 `HTTP` 传输过程中的"中转站"，可以实现缓存加速、负载均衡等功能
 
-### [\#](#_3-http分层){.header-anchor} 3 HTTP分层 {#_3-http分层}
+### [\#](#_3-http分层) 3 HTTP分层 {#_3-http分层}
 
 -   第一层：物理层，`TCP/IP` 里无对应；
 -   第二层：数据链路层，对应 `TCP/IP` 的链接层；
@@ -13732,7 +13732,7 @@ rel="noopener noreferrer"}
 
 > 有一个辨别四层和七层比较好的（但不是绝对的）小窍门，"两个凡是"：凡是由操作系统负责处理的就是四层或四层以下，否则，凡是需要由应用程序（也就是你自己写代码）负责处理的就是七层
 
-### [\#](#_4-http报文是什么样子的){.header-anchor} 4 HTTP报文是什么样子的 {#_4-http报文是什么样子的}
+### [\#](#_4-http报文是什么样子的) 4 HTTP报文是什么样子的 {#_4-http报文是什么样子的}
 
 **HTTP 协议的请求报文和响应报文的结构基本相同，由三大部分组成**
 
@@ -13745,7 +13745,7 @@ rel="noopener noreferrer"}
 一个完整的 HTTP 报文就像是下图的这个样子，注意在 header 和 body
 之间有一个"空行"
 
-### [\#](#_5-http之url){.header-anchor} 5 HTTP之URL {#_5-http之url}
+### [\#](#_5-http之url) 5 HTTP之URL {#_5-http之url}
 
 -   `URI` 是用来唯一标记服务器上资源的一个字符串，通常也称为 URL；
 -   `URI` 通常由 `scheme`、`host:port`、`path` 和 `query`
@@ -13757,7 +13757,7 @@ rel="noopener noreferrer"}
 -   在 `URI` 里对"`@&/`"等特殊字符和汉字必须要做编码，否则服务器收到
     `HTTP`报文后会无法正确处理
 
-### [\#](#_6-http实体数据){.header-anchor} 6 HTTP实体数据 {#_6-http实体数据}
+### [\#](#_6-http实体数据) 6 HTTP实体数据 {#_6-http实体数据}
 
 **1. 数据类型与编码**
 
@@ -13941,7 +13941,7 @@ Vary: Accept-Encoding,User-Agent,Accept
     `Accept`
     等头字段可以用","顺序列出多个可能的选项，还可以用"`;q=`"参数来精确指定权重
 
-### [\#](#_7-谈一谈http协议优缺点){.header-anchor} 7 谈一谈HTTP协议优缺点 {#_7-谈一谈http协议优缺点}
+### [\#](#_7-谈一谈http协议优缺点) 7 谈一谈HTTP协议优缺点 {#_7-谈一谈http协议优缺点}
 
 > 超文本传输协议，**HTTP
 > 是一个在计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范**。
@@ -13971,7 +13971,7 @@ Vary: Accept-Encoding,User-Agent,Accept
 -   通过增加`cookie`和`session`机制，现在的网络请求其实是有状态的
 -   在没有状态的`http`协议下，服务器也一定会保留你每次网络请求对数据的修改，但这跟保留每次访问的数据是不一样的，保留的只是会话产生的结果，而没有保留会话
 
-### [\#](#_8-说一说http-的请求方法){.header-anchor} 8 说一说HTTP 的请求方法 {#_8-说一说http-的请求方法}
+### [\#](#_8-说一说http-的请求方法) 8 说一说HTTP 的请求方法 {#_8-说一说http-的请求方法}
 
 -   HTTP1.0定义了三种请求方法： GET, POST 和 HEAD方法
 -   HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT
@@ -14001,7 +14001,7 @@ Vary: Accept-Encoding,User-Agent,Accept
     跨域资源共享时，对于复杂请求，就是使用 OPTIONS
     方法发送嗅探请求，以判断是否有对指定资源的访问权限。
 
-### [\#](#_9-谈一谈get-和-post-的区别){.header-anchor} 9 谈一谈GET 和 POST 的区别 {#_9-谈一谈get-和-post-的区别}
+### [\#](#_9-谈一谈get-和-post-的区别) 9 谈一谈GET 和 POST 的区别 {#_9-谈一谈get-和-post-的区别}
 
 本质上，只是语义上的区别，GET 用于获取资源，POST 用于提交资源。
 
@@ -14015,7 +14015,7 @@ Vary: Accept-Encoding,User-Agent,Accept
 -   GET请求会一次性发送请求报文，POST请求通常分为两个TCP数据包，首先发
     header 部分，如果服务器响应 100(continue)， 然后发 body 部分。
 
-### [\#](#_10-谈一谈队头阻塞问题){.header-anchor} 10 谈一谈队头阻塞问题 {#_10-谈一谈队头阻塞问题}
+### [\#](#_10-谈一谈队头阻塞问题) 10 谈一谈队头阻塞问题 {#_10-谈一谈队头阻塞问题}
 
 **什么是队头阻塞？**
 
@@ -14032,7 +14032,7 @@ Vary: Accept-Encoding,User-Agent,Accept
 -   顾名思义，我们可以在一个域名下分出多个二级域名出来，而它们最终指向的还是同一个服务器，这样子的话就可以并发处理的任务队列更多，也更好的解决了队头阻塞的问题。
 -   举个例子，比如`TianTian.com`，可以分出很多二级域名，比如`Day1.TianTian.com`，`Day2.TianTian.com`,`Day3.TianTian.com`,这样子就可以有效解决队头阻塞问题。
 
-### [\#](#_11-谈一谈http数据传输){.header-anchor} 11 谈一谈HTTP数据传输 {#_11-谈一谈http数据传输}
+### [\#](#_11-谈一谈http数据传输) 11 谈一谈HTTP数据传输 {#_11-谈一谈http数据传输}
 
 大概遇到的情况就分为**定长数据** 与 **不定长数据**的处理吧。
 
@@ -14124,7 +14124,7 @@ const server = require('http').createServer();
 
 > 上面使用的是nodejs中`http`模块，有兴趣的小伙伴可以去试一试，以上就是HTTP对**定长数据**和**不定长数据**传输过程中的处理手段。
 
-### [\#](#_12-cookie-和-session){.header-anchor} 12 cookie 和 session {#_12-cookie-和-session}
+### [\#](#_12-cookie-和-session) 12 cookie 和 session {#_12-cookie-和-session}
 
 -   `session`： 是一个抽象概念，开发者为了实现中断和继续等操作，将
     `user agent`和 `server`
@@ -14138,7 +14138,7 @@ const server = require('http').createServer();
 
 `session` 的常见实现要借助`cookie`来发送 `sessionID`
 
-### [\#](#_13-介绍一下https和http区别){.header-anchor} 13 介绍一下HTTPS和HTTP区别 {#_13-介绍一下https和http区别}
+### [\#](#_13-介绍一下https和http区别) 13 介绍一下HTTPS和HTTP区别 {#_13-介绍一下https和http区别}
 
 > HTTPS 要比 HTTPS 多了 secure 安全性这个概念，实际上， HTTPS
 > 并不是一个新的应用层协议，它其实就是 HTTP + TLS/SSL
@@ -14176,7 +14176,7 @@ const server = require('http').createServer();
 -   HTTPS 降低一定用户访问速度（实际上优化好就不是缺点了）。
 -   HTTPS 消耗 CPU 资源，需要增加大量机器。
 
-### [\#](#_14-https握手过程){.header-anchor} 14 HTTPS握手过程 {#_14-https握手过程}
+### [\#](#_14-https握手过程) 14 HTTPS握手过程 {#_14-https握手过程}
 
 -   第一步，客户端给出协议版本号、一个客户端生成的随机数（Client
     random），以及客户端支持的加密方法
@@ -14194,7 +14194,7 @@ const server = require('http').createServer();
     请求，服务端返回证书，客户端对证书进行验证，验证通过后本地生成用于构造对称加密算法的随机数
 -   通过证书中的公钥对随机数进行加密传输到服务端（随机对称密钥），服务端接收后通过私钥解密得到随机对称密钥，之后的数据交互通过对称加密算法进行加解密。（既有对称加密，也有非对称加密）
 
-### [\#](#_15-介绍一个https工作原理){.header-anchor} 15 介绍一个HTTPS工作原理 {#_15-介绍一个https工作原理}
+### [\#](#_15-介绍一个https工作原理) 15 介绍一个HTTPS工作原理 {#_15-介绍一个https工作原理}
 
 我们可以把HTTPS理解成**HTTPS = HTTP + SSL/TLS**
 
@@ -14285,7 +14285,7 @@ WWW万维网有许许多多的客户端，不可能都用秘钥A进行信息加�
 -   大致流程：客户端拿到服务器的公钥（是正确的），然后客户端随机生成一个**对称加密的秘钥**，使用**该公钥**加密，传输给服务端，服务端再通过解密拿到该**对称秘钥**，后续的所有信息都通过该**对称秘钥**进行加密解密，完成整个HTTPS的流程。
 -   **第三方认证**，最重要的是**数字签名**，避免了获取的公钥是中间人的。
 
-### [\#](#_16-ssl-连接断开后如何恢复){.header-anchor} 16 SSL 连接断开后如何恢复 {#_16-ssl-连接断开后如何恢复}
+### [\#](#_16-ssl-连接断开后如何恢复) 16 SSL 连接断开后如何恢复 {#_16-ssl-连接断开后如何恢复}
 
 一共有两种方法来恢复断开的 SSL 连接，一种是使用 session ID，一种是
 session ticket。
@@ -14304,7 +14304,7 @@ ID
 是加密的，只有服务器能够解密，里面包含了本次会话的信息，比如对话秘钥和加密方法等。这样不管我们的请求是否转移到其他的服务器上，当服务器将
 ticket 解密以后，就能够获取上次对话的信息，就不用重新生成对话秘钥了。
 
-### [\#](#_17-谈一谈你对http-2理解){.header-anchor} 17 谈一谈你对HTTP/2理解 {#_17-谈一谈你对http-2理解}
+### [\#](#_17-谈一谈你对http-2理解) 17 谈一谈你对HTTP/2理解 {#_17-谈一谈你对http-2理解}
 
 > 首先补充一下，http 和 https 的区别，相比于 http,https 是基于 ssl
 > 加密的 http 协议
@@ -14377,7 +14377,7 @@ HTTP2中：
 -   TCP的队头阻塞并没有彻底解决。在HTTP/2中，多个请求是跑在一个TCP管道中的。但当HTTP/2出现丢包时，整个
     TCP 都要开始等待重传，那么就会阻塞该TCP连接中的所有请求。
 
-### [\#](#_18-http3){.header-anchor} 18 HTTP3 {#_18-http3}
+### [\#](#_18-http3) 18 HTTP3 {#_18-http3}
 
 > Google
 > 在推SPDY的时候就已经意识到了这些问题，于是就另起炉灶搞了一个基于 UDP
@@ -14388,7 +14388,7 @@ HTTP2中：
 -   集成了TLS加密功能。目前QUIC使用的是TLS1.3，相较于早期版本TLS1.3有更多的优点，其中最重要的一点是减少了握手所花费的RTT个数。
 -   多路复用，彻底解决TCP中队头阻塞的问题。
 
-### [\#](#_19-http-1-0-http1-1-http2-0版本之间的差异){.header-anchor} 19 HTTP/1.0 HTTP1.1 HTTP2.0版本之间的差异 {#_19-http-1-0-http1-1-http2-0版本之间的差异}
+### [\#](#_19-http-1-0-http1-1-http2-0版本之间的差异) 19 HTTP/1.0 HTTP1.1 HTTP2.0版本之间的差异 {#_19-http-1-0-http1-1-http2-0版本之间的差异}
 
 -   **HTTP
     0.9**：1991年,原型版本，功能简陋，只有一个命令GET,只支持纯文本内容，该版本已过时。
@@ -14438,7 +14438,7 @@ HTTP2中：
     -   `请求优先级`
         可以设置数据帧的优先级，让服务端先处理重要资源，优化用户体验。
 
-### [\#](#_20-dns如何工作的){.header-anchor} 20 DNS如何工作的 {#_20-dns如何工作的}
+### [\#](#_20-dns如何工作的) 20 DNS如何工作的 {#_20-dns如何工作的}
 
 > DNS 的作用就是通过域名查询到具体的 IP。DNS 协议提供的是一种主机名到 IP
 > 地址的转换服务，就是我们常说的域名系统。是应用层协议，通常该协议运行在UDP协议之上，使用的是53端口号。
@@ -14514,7 +14514,7 @@ TTL 代表了该条记录的缓存的时间。**
     接下来的过程就是迭代过程。
 -   递归查询一般而言，发送一次请求就够，迭代过程需要用户发送多次请求。
 
-### [\#](#_21-短轮询、长轮询和-websocket-间的区别){.header-anchor} 21 短轮询、长轮询和 WebSocket 间的区别 {#_21-短轮询、长轮询和-websocket-间的区别}
+### [\#](#_21-短轮询、长轮询和-websocket-间的区别) 21 短轮询、长轮询和 WebSocket 间的区别 {#_21-短轮询、长轮询和-websocket-间的区别}
 
 **1. 短轮询**
 
@@ -14553,7 +14553,7 @@ TTL 代表了该条记录的缓存的时间。**
 -   使用 WebSocket 协议的缺点是在服务器端的配置比较复杂。WebSocket
     是一个全双工的协议，也就是通信双方是平等的，可以相互发送消息。
 
-### [\#](#_22-说一说正向代理和反向代理){.header-anchor} 22 说一说正向代理和反向代理 {#_22-说一说正向代理和反向代理}
+### [\#](#_22-说一说正向代理和反向代理) 22 说一说正向代理和反向代理 {#_22-说一说正向代理和反向代理}
 
 **正向代理**
 
@@ -14575,7 +14575,7 @@ TTL 代表了该条记录的缓存的时间。**
     服务器中存在缓存，所以有可能一个服务器出现故障后，域名解析仍然返回的是那个
     IP 地址，就会造成访问的问题。
 
-### [\#](#_23-介绍一下connection-keep-alive){.header-anchor} 23 介绍一下Connection:keep-alive {#_23-介绍一下connection-keep-alive}
+### [\#](#_23-介绍一下connection-keep-alive) 23 介绍一下Connection:keep-alive {#_23-介绍一下connection-keep-alive}
 
 **什么是keep-alive**
 
@@ -14614,7 +14614,7 @@ Connection: close
 目前大部分浏览器都是用http1.1协议，也就是说默认都会发起Keep-Alive的连接请求了，所以是否能完成一个完整的Keep-
 Alive连接就看服务器设置情况。
 
-### [\#](#_24-http-https-协议总结){.header-anchor} 24 http/https 协议总结 {#_24-http-https-协议总结}
+### [\#](#_24-http-https-协议总结) 24 http/https 协议总结 {#_24-http-https-协议总结}
 
 **1.0 协议缺陷:**
 
@@ -14677,7 +14677,7 @@ Alive连接就看服务器设置情况。
     -   最小粒度只到 `s`， `s` 以内的改动无法检测到
 -   `Etag` 的优先级高于`Last-Modified`
 
-### [\#](#_25-tcp为什么要三次握手){.header-anchor} 25 TCP为什么要三次握手 {#_25-tcp为什么要三次握手}
+### [\#](#_25-tcp为什么要三次握手) 25 TCP为什么要三次握手 {#_25-tcp为什么要三次握手}
 
 > 客户端和服务端都需要直到各自可收发，因此需要三次握手
 
@@ -14728,7 +14728,7 @@ Alive连接就看服务器设置情况。
 -   关闭连接时，当收到对方的FIN报文通知时，它仅仅表示对方没有数据发送给你了；但未必你所有的数据都全部发送给对方了
 -   所以你未必会马上关闭`SOCKET`,也即你可能还需要发送一些数据给对方之后，再发送FIN报文给对方来表示你同意现在可以关闭连接了，所以它这里的`ACK`报文和FIN报文多数情况下都是分开发送的。
 
-### [\#](#_26-为什么要有-websocket){.header-anchor} 26 为什么要有 WebSocket {#_26-为什么要有-websocket}
+### [\#](#_26-为什么要有-websocket) 26 为什么要有 WebSocket {#_26-为什么要有-websocket}
 
 已经有了被广泛应用的 HTTP 协议，为什么要再出一个 WebSocket
 呢？它有哪些好处呢？
@@ -14828,7 +14828,7 @@ HTTP 复杂的多，所以是否要在项目中引入 WebSocket 必须慎重考�
 -   `WebSocket` 利用 HTTP 协议实现连接握手，发送 GET
     请求要求"协议升级"，握手过程中有个非常简单的认证机制，目的是防止误连接。
 
-### [\#](#_27-udp和tcp有什么区别){.header-anchor} 27 UDP和TCP有什么区别 {#_27-udp和tcp有什么区别}
+### [\#](#_27-udp和tcp有什么区别) 27 UDP和TCP有什么区别 {#_27-udp和tcp有什么区别}
 
 -   TCP协议在传送数据段的时候要给段标号；UDP协议不
 -   TCP协议可靠；UDP协议不可靠
@@ -14837,9 +14837,9 @@ HTTP 复杂的多，所以是否要在项目中引入 WebSocket 必须慎重考�
 -   TCP协议的发送方要确认接收方是否收到数据段（3次握手协议）
 -   TCP协议采用窗口技术和流控制
 
-## [\#](#十一、9种前端常见的设计模式){.header-anchor} 十一、9种前端常见的设计模式 {#十一、9种前端常见的设计模式}
+## [\#](#十一、9种前端常见的设计模式) 十一、9种前端常见的设计模式 {#十一、9种前端常见的设计模式}
 
-### [\#](#_1-外观模式){.header-anchor} 1. 外观模式 {#_1-外观模式}
+### [\#](#_1-外观模式) 1. 外观模式 {#_1-外观模式}
 
 > 外观模式是最常见的设计模式之一，它为子系统中的一组接口提供一个统一的高层接口，使子系统更容易使用。简而言之外观设计模式就是把多个子系统中复杂逻辑进行抽象，从而提供一个更统一、更简洁、更易用的API。很多我们常用的框架和库基本都遵循了外观设计模式，比如JQuery就把复杂的原生DOM操作进行了抽象和封装，并消除了浏览器之间的兼容问题，从而提供了一个更高级更易用的版本。其实在平时工作中我们也会经常用到外观模式进行开发，只是我们不自知而已
 
@@ -14891,7 +14891,7 @@ let myEvent = {
 
 > 不符合开闭原则，如果要改东西很麻烦，继承重写都不合适。
 
-### [\#](#_2-代理模式){.header-anchor} 2. 代理模式 {#_2-代理模式}
+### [\#](#_2-代理模式) 2. 代理模式 {#_2-代理模式}
 
 > 是为一个对象提供一个代用品或占位符，以便控制对它的访问
 
@@ -14963,7 +14963,7 @@ HTML元 素事件代理
 
 处理请求速度可能有差别，非直接访问存在开销
 
-### [\#](#_3-工厂模式){.header-anchor} 3. 工厂模式 {#_3-工厂模式}
+### [\#](#_3-工厂模式) 3. 工厂模式 {#_3-工厂模式}
 
 > 工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。该模式使一个类的实例化延迟到了子类。而子类可以重写接口方法以便创建的时候指定自己的对象类型。
 
@@ -15020,7 +15020,7 @@ class Product {
 
 由于对象的创建过程被高效的抽象在一个接口后面的事实,这也会给依赖于这个过程可能会有多复杂的单元测试带来问题。
 
-### [\#](#_4-单例模式){.header-anchor} 4. 单例模式 {#_4-单例模式}
+### [\#](#_4-单例模式) 4. 单例模式 {#_4-单例模式}
 
 > 顾名思义，单例模式中Class的实例个数最多为1。当需要一个对象去贯穿整个系统执行某些任务时，单例模式就派上了用场。而除此之外的场景尽量避免单例模式的使用，因为单例模式会引入全局状态，而一个健康的系统应该避免引入过多的全局状态。
 
@@ -15098,7 +15098,7 @@ const fooService1 = FooServiceSingleton.getInstance();
 -   从而不利于单元测试。无法单独测试一个调用了来自单例的方法的类，而只能把它与那个单例作为一
     个单元一起测试。
 
-### [\#](#_5-策略模式){.header-anchor} 5. 策略模式 {#_5-策略模式}
+### [\#](#_5-策略模式) 5. 策略模式 {#_5-策略模式}
 
 > 策略模式简单描述就是：对象有某个行为，但是在不同的场景中，该行为有不同的实现算法。把它们一个个封装起来，并且使它们可以互相替换
 
@@ -15230,7 +15230,7 @@ const fooService1 = FooServiceSingleton.getInstance();
 -   会在程序中增加许多策略类或者策略对象
 -   要使用策略模式，必须了解所有的strategy，必须了解各个strategy之间的不同点，这样才能选择一个合适的strategy
 
-### [\#](#_6-迭代器模式){.header-anchor} 6. 迭代器模式 {#_6-迭代器模式}
+### [\#](#_6-迭代器模式) 6. 迭代器模式 {#_6-迭代器模式}
 
 > 如果你看到这，ES6中的迭代器 Iterator
 > 相信你还是有点印象的，上面第60条已经做过简单的介绍。迭代器模式简单的说就是提供一种方法顺序一个聚合对象中各个元素，而又不暴露该对象的内部表示。
@@ -15321,7 +15321,7 @@ for (num of Range(1, 5)) {
 ```
 
 
-### [\#](#_7-观察者模式){.header-anchor} 7. 观察者模式 {#_7-观察者模式}
+### [\#](#_7-观察者模式) 7. 观察者模式 {#_7-观察者模式}
 
 > 观察者模式又称发布-订阅模式（Publish/Subscribe
 > Pattern），是我们经常接触到的设计模式，日常生活中的应用也比比皆是，比如你订阅了某个博主的频道，当有内容更新时会收到推送；又比如JavaScript中的事件订阅响应机制。观察者模式的思想用一句话描述就是：被观察对象（subject）维护一组观察者（observer），当被观察对象状态改变时，通过调用观察者的某个方法将这些变化通知到观察者。
@@ -15429,7 +15429,7 @@ document.body.addEventListener('click', function() {
 
 > 过度使用会导致对象与对象之间的联系弱化，会导致程序难以跟踪维护和理解
 
-### [\#](#_8-中介者模式){.header-anchor} 8. 中介者模式 {#_8-中介者模式}
+### [\#](#_8-中介者模式) 8. 中介者模式 {#_8-中介者模式}
 
 -   在中介者模式中，中介者（Mediator）包装了一系列对象相互作用的方式，使得这些对象不必直接相互作用，而是由中介者协调它们之间的交互，从而使它们可以松散偶合。当某些对象之间的作用发生改变时，不会立即影响其他的一些对象之间的作用，保证这些作用可以彼此独立的变化。
 -   中介者模式和观察者模式有一定的相似性，都是一对多的关系，也都是集中式通信，不同的是中介者模式是处理同级对象之间的交互，而观察者模式是处理Observer和Subject之间的交互。中介者模式有些像婚恋中介，相亲对象刚开始并不能直接交流，而是要通过中介去筛选匹配再决定谁和谁见面。
@@ -15557,7 +15557,7 @@ const chatroom = new Chatroom();
 > 系统中会新增一个中介者对象，因为对象之间交互的复杂性，转移成了中介者对象的复杂性，使得中介者对象经常是巨大的。中介
 > 者对象自身往往就是一个难以维护的对象。
 
-### [\#](#_9-访问者模式){.header-anchor} 9. 访问者模式 {#_9-访问者模式}
+### [\#](#_9-访问者模式) 9. 访问者模式 {#_9-访问者模式}
 
 > 访问者模式
 > 是一种将算法与对象结构分离的设计模式，通俗点讲就是：访问者模式让我们能够在不改变一个对象结构的前提下能够给该对象增加新的逻辑，新增的逻辑保存在一个独立的访问者对象中。访问者模式常用于拓展一些第三方的库和工具。
@@ -15665,11 +15665,11 @@ const employee = new Employee('bruce', 1000);
 -   违反了依赖倒置原则，依赖了具体类，没有依赖抽象。
 -   具体元素变更比较困难
 
-## [\#](#十二、综合问题){.header-anchor} 十二、综合问题 {#十二、综合问题}
+## [\#](#十二、综合问题) 十二、综合问题 {#十二、综合问题}
 
-### [\#](#前端常见面试流程){.header-anchor} 前端常见面试流程
+### [\#](#前端常见面试流程) 前端常见面试流程
 
-### [\#](#面试一定要问这几个问题){.header-anchor} 面试一定要问这几个问题
+### [\#](#面试一定要问这几个问题) 面试一定要问这几个问题
 
 **最后一个问题：面试官问，你想了解什么（面试一定要问这几个问题）**
 
@@ -15677,14 +15677,14 @@ const employee = new Employee('bruce', 1000);
 -   部门有多少人，有什么角色（看部门是否规范）
 -   项目的技术栈，以及对接的其他技术团队（看技术栈是否老旧）
 
-### [\#](#经历){.header-anchor} 经历
+### [\#](#经历) 经历
 
 -   整个经历自我介绍，越详细越好，什么时候接触计算机，什么时候接触前端。
 -   整个经历中，你认为最值得骄傲的事情，最难的事情是什么。
 -   什么事情让你自豪，什么事情让你有挫败感。
 -   未来的发展，自己的规划。
 
-### [\#](#项目相关){.header-anchor} 项目相关
+### [\#](#项目相关) 项目相关
 
 -   项目难点。（如何发现问题，解决思路，最后结果）
 -   项目考虑过优化吗，你是如何优化的，思路是什么。
@@ -15695,7 +15695,7 @@ const employee = new Employee('bruce', 1000);
 -   说一说项目中你们是如何测试的，有哪些单元测试方案，能不能说一说。
 -   项目中引入TS的原因，为什么这么做。
 
-### [\#](#项目难点问题分析){.header-anchor} 项目难点问题分析
+### [\#](#项目难点问题分析) 项目难点问题分析
 
 **遇到问题要注意积累**
 
@@ -15720,7 +15720,7 @@ const employee = new Employee('bruce', 1000);
 -   解决：将老版本的HTML反解析成JSON格式即可解决
 -   成长：要考虑完整的输入输出 + 考虑旧版本用户 + 参考其他产品
 
-### [\#](#项目流程相关面试题){.header-anchor} 项目流程相关面试题
+### [\#](#项目流程相关面试题) 项目流程相关面试题
 
 **和前端开发相关的项目角色有哪些**
 
@@ -15779,7 +15779,7 @@ loading="lazy"}
     -   每日一沟通（如站会）
     -   及时识别风险，及时汇报（如设计图没出来）
 
-### [\#](#把握投递简历的黄金时间段){.header-anchor} 把握投递简历的黄金时间段
+### [\#](#把握投递简历的黄金时间段) 把握投递简历的黄金时间段
 
 > 大家从事不同种类的工作，每天也在不断地制定自己的工作时间表。每个月总结的时候会发现有些事情总是在一个固定的时间去做，也可能在这个时间段发起同一件事情的几率非常的大，而且不止自己这样做，做同样工作的小伙伴亦如此。这就是工作种类作息时间的安排，招聘人员也一样，他们也有固定看简历和电话沟通的时间段。如果抓住这个"黄金投递点"，就等于抓住了招聘人员的视线，进而获得更多关注的可能性会更大。
 
@@ -15810,7 +15810,7 @@ loading="lazy"}
 筛选简历的时间段，由此可知，`投递简历的“黄金时间段”在上午的 10 ~ 11 点 或者下午的 3 ~ 4 点`。因此，从现在起，调整投递简历的时间吧，在更好的时间段将自己的简历呈现到
 HR 的面前。
 
-### [\#](#把握面试时的关键点){.header-anchor} 把握面试时的关键点
+### [\#](#把握面试时的关键点) 把握面试时的关键点
 
 **面试前的准备工作**
 
@@ -15920,7 +15920,7 @@ HR 会重新考虑是否要录用你了。
 
 这是面试结束前的最后一个问题，也可以认为是个形式问题或走个流程，此时可根据前面面试过程中的表现程度来适当的提问，比如`公司福利、上下班时间、团队氛围、个人岗位发展`等，但尽量不要问从网上就能查到公司信息的问题。
 
-### [\#](#工作交接流程-福利衔接){.header-anchor} 工作交接流程 & 福利衔接
+### [\#](#工作交接流程-福利衔接) 工作交接流程 & 福利衔接
 
 **工作交接流程**
 
@@ -15994,9 +15994,9 @@ leader
 
 通常，公司会按照你出勤的月份帮你做年假的换算，然后与你协商安排延后几天离职，或结算成工资，或者按照公司的规定有其他操作。
 
-## [\#](#十三、人事面){.header-anchor} 十三、人事面 {#十三、人事面}
+## [\#](#十三、人事面) 十三、人事面 {#十三、人事面}
 
-### [\#](#第一个要点-你是否胜任这份工作){.header-anchor} 第一个要点: 你是否胜任这份工作？
+### [\#](#第一个要点-你是否胜任这份工作) 第一个要点: 你是否胜任这份工作？
 
 **1. 对于这份工作，你最感兴趣的是什么？**
 
@@ -16230,7 +16230,7 @@ leader
 -   有社会责任感的企业定能增加员工的忠诚度和满意度，吸引相同价值观的人才一起为企业为社会做贡献。
 -   这对我不重要，我认为企业的首要任务便是为自己的员工提供好的福利。
 
-### [\#](#第二个要点-你是怎样的人){.header-anchor} 第二个要点：你是怎样的人？ {#第二个要点-你是怎样的人}
+### [\#](#第二个要点-你是怎样的人) 第二个要点：你是怎样的人？ {#第二个要点-你是怎样的人}
 
 **28. 开场白。**\
 当你和面试官打完招呼后，有可能会出现短暂的沉默，面试官以此测试你的反应和主动性。你可以用以下方式开场：
@@ -16512,7 +16512,7 @@ leader
 -   好的团队，自由的环境。
 -   能展现自身才华，帮助公司解决问题：\_\_\_\_\_。
 
-### [\#](#第三个要点-你是否适合这个企业){.header-anchor} 第三个要点：你是否适合这个企业？ {#第三个要点-你是否适合这个企业}
+### [\#](#第三个要点-你是否适合这个企业) 第三个要点：你是否适合这个企业？ {#第三个要点-你是否适合这个企业}
 
 **62. 你将与我们一起相处多久？**
 
@@ -16744,7 +16744,7 @@ leader
 -   请问前任是离职还是升迁？
 -   请问您个人觉得这个岗位最重要最富挑战的点是什么？
 
-### [\#](#第四个要点-聘用你-公司需付出多少){.header-anchor} 第四个要点：聘用你，公司需付出多少？ {#第四个要点-聘用你-公司需付出多少}
+### [\#](#第四个要点-聘用你-公司需付出多少) 第四个要点：聘用你，公司需付出多少？ {#第四个要点-聘用你-公司需付出多少}
 
 **91. 你的上份薪资是多少？**
 
