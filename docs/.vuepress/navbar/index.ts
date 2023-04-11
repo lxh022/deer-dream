@@ -193,6 +193,10 @@ export const Navbar = navbar([
                         link: "https://www.shapedivider.app/"
                     },
                     {
+                        text: "在线文件转换器",
+                        link: "https://cloudconvert.com/"
+                    },
+                    {
                         text: "Carbon | 代码转图片工具",
                         link: "https://carbon.now.sh/"
                     },

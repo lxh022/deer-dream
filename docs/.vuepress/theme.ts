@@ -3,13 +3,13 @@ import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "http://blog.lxh1919.club/",
 
   favicon: "/images/favicon.png",
 
   author: {
     name: "Mr.Lu",
-    url: "https://mrhope.site",
+    url: "http://blog.lxh1919.club/",
   },
 
   iconAssets: "iconfont",

@@ -96,5 +96,25 @@ export const Sidebar = sidebar([
                 children: 'structure',
             },
         ],
-    }
+    },
+    {
+        text: '面试题集合',
+        icon: 'relation',
+        prefix: '/topic/',
+        collapsible: true,
+        children: [
+            {
+                text: '基础篇',
+                icon: 'snow',
+                prefix: 'foundation',
+                link: 'foundation',
+            },
+            {
+                text: '进阶篇',
+                icon: 'selection',
+                prefix: 'advance',
+                link: 'advance',
+            },
+        ],
+    },
 ]);
