@@ -39,6 +39,7 @@ jobs:
           # 这是文档部署到的分支名称
           branch: blog.lxh1919.club
           folder: docs/.vuepress/dist
+          
       - name: 打包镜像, 上传 Docker Hub
         run: |
         # 登录docker, secrets.DOCKER_USERNMAE 就是我们在github上配置的docker的账户和密码
