@@ -40,11 +40,11 @@ jobs:
       - name: 登录docker
         run: docker login -u ${{secrets.DOCKER_USERNAME }} -p  ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: build
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest  .
+      # - name: build
+      #   run: docker build -t ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest  .
 
       - name: push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/deer-blog:tagname
 
       # - name: 登录服务器, 执行脚本
       #   uses: appleboy/ssh-action@master
