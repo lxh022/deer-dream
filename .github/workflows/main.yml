@@ -33,4 +33,30 @@ jobs:
           yarn run docs:build
           > docs/.vuepress/dist/.nojekyll
 
+      - name: 部署文档
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 这是文档部署到的分支名称
+          branch: blog.lxh1919.club
+          folder: docs/.vuepress/dist
+      - name: 打包镜像, 上传 Docker Hub
+        run: |
+        # 登录docker, secrets.DOCKER_USERNMAE 就是我们在github上配置的docker的账户和密码
+          docker login -u ${{secrets.DOCKER_USERNAME }} -p  ${{ secrets.DOCKER_PASSWORD }}
+        # 打包镜像 -t参数给镜像命名 
+        # .是基于当前目录的 Dockerfile 来构建镜像
+          docker build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest  .
+        # 推送到我们的 docker 镜像仓库
+          docker push ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest
+
+      - name: 登录服务器, 执行脚本
+        uses: appleboy/ssh-action@master
+        with:
+          host: 101.43.222.171
+          username: elqpkdds
+          password: 6e20d3f09bb0
+          # 执行脚本
+          script: |
+          # 部署脚本 后面的vars是传递给脚本的参数
+            deploy.sh ${{ secrets.DOCKER_USERNAME }} ${{ vars.IMAGE_NAME }} ${{ vars.PORT }} ${{ vars.CONTAINS_PORT }}
  
