@@ -37,11 +37,14 @@ jobs:
       # 打包镜像 -t参数给镜像命名 
       # .是基于当前目录的 Dockerfile 来构建镜像
       # 推送到我们的 docker 镜像仓库
-      - name: 打包镜像, 上传 Docker Hub
-        run: |
-          docker login -u ${{secrets.DOCKER_USERNAME }} -p  ${{ secrets.DOCKER_PASSWORD }}
-          docker build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest
+      - name: 登录docker
+        run: docker login -u ${{secrets.DOCKER_USERNAME }} -p  ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: build
+        run: docker build -t front .
+
+      - name: push
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/deer-blog:latest
 
       # - name: 登录服务器, 执行脚本
       #   uses: appleboy/ssh-action@master
